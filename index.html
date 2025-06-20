@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Batch Maps - Bespoke Cartography for the Digital Age</title>
+    <meta name="description" content="AI-assisted GIS solutions with a human touch. Professional geospatial data science, web cartography, and AI-assisted workflows.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- No external CSS frameworks - Pure vanilla CSS -->
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="#hero" class="logo-link">
+                    <img src="images/logo-point.png" alt="Small Batch Maps logo" class="logo-image" />
+                    Small Batch Maps
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-desktop">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <ul class="mobile-nav-list">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-title-container">
+                <img src="images/logo-point.png" alt="Small Batch Maps logo" class="hero-logo" />
+                <div class="hero-text-content">
+                    <h1 class="hero-title animate-fade-in">
+                        Small Batch Maps
+                    </h1>
+                    <p class="hero-subtitle animate-fade-in-delay">
+                        Bespoke Cartography for the Digital Age
+                    </p>
+                    <button class="cta-button animate-fade-in-delay-2" onclick="scrollToSection('services')">
+                        Explore Services
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="compass-rose"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">My Services &amp; Expertise</h2>
+            <p class="section-subtitle">AI-assisted GIS solutions with a human touch</p>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" data-title="Geospatial Data Science">
+                    <div class="service-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2.5 2.5h-15v-15h15v15zm0-16.5h-15c-.83 0-1.5.67-1.5 1.5v15c0 .83.67 1.5 1.5 1.5h15c.83 0 1.5-.67 1.5-1.5v-15c0-.83-.67-1.5-1.5-1.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Geospatial Data Science</h3>
+                    <p class="service-description">Data wrangling and cleaning, advanced spatial analysis to reveal patterns unlock insights from your geographic data.</p>
+                    <button class="learn-more-btn" data-service="geospatial">Learn More</button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card" data-title="Web Cartography">
+                    <div class="service-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Web Cartography</h3>
+                    <p class="service-description">Custom interactive maps and dashboards that tell compelling stories with your spatial data.</p>
+                    <button class="learn-more-btn" data-service="cartography">Learn More</button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card service-card-wide" data-title="AI-Assisted Workflows">
+                    <div class="service-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20,15.5C18.25,15.5 16.6,16.3 15.4,17.5C14.2,16.3 12.55,15.5 10.8,15.5C7.93,15.5 5.61,17.81 5.61,20.69C5.61,21.08 5.98,21.45 6.37,21.45H19.63C20.02,21.45 20.39,21.08 20.39,20.69C20.39,17.81 18.07,15.5 15.2,15.5H20Z"/>
+                            <path d="M12,2C13.1,2 14,2.9 14,4C14,5.1 13.1,6 12,6C10.9,6 10,5.1 10,4C10,2.9 10.9,2 12,2Z"/>
+                            <path d="M21,9V7L15,13L13.5,7.5C13.1,6.8 12.4,6.3 11.7,6.3C11,6.3 10.3,6.8 9.9,7.5L9,10L7,8V10C7,10.6 7.4,11 8,11C8.6,11 9,10.6 9,10V9.5L10.5,11L12,6.5L13.5,12L18.5,7H21Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">AI-Assisted Workflows</h3>
+                    <p class="service-description">Cutting-edge automation and AI integration to streamline your geospatial operations.</p>
+                    <button class="learn-more-btn" data-service="ai-workflows">Learn More</button>
+                </div>
+            </div>
+            
+            <!-- Service Details Expansion Section -->
+            <div id="service-expansion" class="service-expansion hidden">
+                <div class="service-expansion-header">
+                    <h3 id="expansion-title" class="expansion-title"></h3>
+                    <button id="close-expansion" class="close-expansion-btn">
+                        <svg class="close-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Geospatial Data Science Content -->
+                <div id="geospatial-content" class="expansion-content hidden">
+                    <div class="geospatial-expansion">
+                        <!-- Section Intro -->
+                        <div class="geo-header">
+                            <p class="geo-intro"><strong>Geospatial Data Science</strong> combines the power of location with data analysis to uncover patterns, trends, and relationships in the world around us.
+                                It transforms messy, real-world spatial data into actionable insights—using tools like Python, statistics, and machine learning—to support smarter decisions in planning, policy, logistics, public health, and more.</p>
+                        </div>
+
+                        <!-- Visual Workflow -->
+                        <div class="workflow-section">
+                            <h3 class="workflow-title">My process for geospatial data science: messy data to mapping insights</h3>
+                            <div class="workflow-pipeline">
+                                <div class="workflow-step">
+                                    <h4>Raw Geographic Data</h4>
+                                    <div class="workflow-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                        </svg>
+                                    </div>
+                                    <p>Spatial datasets, APIs, sensors</p>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <h4>Data Cleaning &amp; Analysis</h4>
+                                    <div class="workflow-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                        </svg>
+                                    </div>
+                                    <p>Python + Jupyter for ESDA &amp; ETL</p>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <h4>Visual Insights</h4>
+                                    <div class="workflow-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                                        </svg>
+                                    </div>
+                                    <p>Beautiful charts &amp; spatial visualizations</p>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <h4>Scalable Infrastructure</h4>
+                                    <div class="workflow-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20 6L10 12L2 6V4L10 10L20 4V6Z"/>
+                                        </svg>
+                                    </div>
+                                    <p>Fast data APIs &amp; spatial databases</p>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <h4>Interactive Web Maps</h4>
+                                    <div class="workflow-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                    </div>
+                                    <p>Custom UX/UI for your users</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Core Capabilities -->
+                        <div class="capabilities-section">
+                            <h3 class="capabilities-title">Core Capabilities</h3>
+                            <div class="capabilities-grid">
+                                <div class="capability-column">
+                                    <div class="capability-item">
+                                        <h4>Exploratory Spatial Data Analysis (ESDA)</h4>
+                                        <p>Identify spatial clusters, trends, and outliers using robust statistical and visual methods.</p>
+                                    </div>
+                                    <div class="capability-item">
+                                        <h4>AI-Assisted Predictive Modeling</h4>
+                                        <p>Forecast future scenarios using spatial machine learning and synthetic data generation.</p>
+                                    </div>
+                                </div>
+                                <div class="capability-column">
+                                    <div class="capability-item">
+                                        <h4>Time-Series &amp; Spatiotemporal Modeling</h4>
+                                        <p>Understand how geographic phenomena change over time — seasonal patterns, mobility, and dynamic shifts.</p>
+                                    </div>
+                                    <div class="capability-item">
+                                        <h4>Data Integration &amp; API Design</h4>
+                                        <p>Clean, combine, and operationalize datasets via modern spatial databases and scalable API pipelines.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Call-to-Action -->
+                        <div class="geo-cta-section">
+                            <div class="geo-cta-buttons">
+                                <button class="cta-button cta-primary" onclick="scrollToSection('contact')">
+                                    Let's Talk
+                                </button>
+                                <button class="cta-button cta-secondary" onclick="window.open('https://github.com/smallbatchmaps', '_blank')">
+                                    Explore Projects
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Web Cartography Content -->
+                <div id="cartography-content" class="expansion-content hidden">
+                    <div class="service-details-expanded">
+                        <div class="service-overview">
+                            <p class="service-intro">Create compelling, interactive web maps and dashboards that transform complex spatial data into clear, engaging visual stories. I specialize in custom cartographic solutions that combine aesthetic appeal with functional excellence.</p>
+                        </div>
+                        
+                        <div class="service-capabilities">
+                            <h4 class="capability-title">Technical Expertise</h4>
+                            <div class="capabilities-grid">
+                                <div class="capability-item">
+                                    <h5>Interactive Web Maps</h5>
+                                    <p>Custom-built interactive maps using modern libraries like MapLibre GL JS, Leaflet, and Mapbox. Optimized for performance and user experience across all devices.</p>
+                                </div>
+                                <div class="capability-item">
+                                    <h5>Data Visualization Dashboards</h5>
+                                    <p>Comprehensive dashboards that integrate multiple data sources, real-time updates, and interactive controls for exploring complex spatial datasets.</p>
+                                </div>
+                                <div class="capability-item">
+                                    <h5>Responsive Design</h5>
+                                    <p>Mobile-first approach ensuring your maps and applications work seamlessly across desktop, tablet, and mobile devices with intuitive touch controls.</p>
+                                </div>
+                                <div class="capability-item">
+                                    <h5>Custom Styling &amp; Branding</h5>
+                                    <p>Tailored visual design that matches your brand identity, including custom map styles, color schemes, and user interface elements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-applications">
+                            <h4 class="applications-title">Project Types</h4>
+                            <ul class="applications-list">
+                                <li>Real estate and property visualization platforms</li>
+                                <li>Environmental monitoring dashboards</li>
+                                <li>Public transit and transportation apps</li>
+                                <li>Business intelligence and analytics tools</li>
+                                <li>Educational and storytelling applications</li>
+                                <li>Emergency response and disaster management systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI-Assisted Workflows Content -->
+                <div id="ai-workflows-content" class="expansion-content hidden">
+                    <div class="service-details-expanded">
+                        <div class="service-overview">
+                            <p class="service-intro">Leverage cutting-edge AI and automation technologies to streamline your geospatial operations. I develop intelligent systems that augment human capabilities and automate repetitive GIS tasks, making your workflows more efficient and scalable.</p>
+                        </div>
+                        
+                        <div class="service-capabilities">
+                            <h4 class="capability-title">AI Integration Solutions</h4>
+                            <div class="capabilities-grid">
+                                <div class="capability-item">
+                                    <h5>Autonomous GIS Agents</h5>
+                                    <p>Intelligent agents that can perform complex GIS operations, data analysis, and decision-making with minimal human intervention, powered by large language models and spatial reasoning.</p>
+                                </div>
+                                <div class="capability-item">
+                                    <h5>RAG Pipelines for Spatial Data</h5>
+                                    <p>Retrieval-Augmented Generation systems that can query, analyze, and generate insights from vast spatial datasets using natural language interfaces.</p>
+                                </div>
+                                <div class="capability-item">
+                                    <h5>Technical Infrastructure</h5>
+                                    <p>Robust, scalable infrastructure using modern technologies like Docker, Kubernetes, and cloud services to support AI-assisted geospatial applications.</p>
+                                </div>
+                                <div class="capability-item">
+                                    <h5>API Development</h5>
+                                    <p>Custom APIs built with FastAPI and other modern frameworks to integrate AI capabilities into existing systems and workflows.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-applications">
+                            <h4 class="applications-title">Implementation Areas</h4>
+                            <ul class="applications-list">
+                                <li>Automated spatial data processing and quality control</li>
+                                <li>Intelligent geocoding and address matching</li>
+                                <li>AI-assisted feature extraction from imagery</li>
+                                <li>Natural language querying of spatial databases</li>
+                                <li>Automated report generation and insights</li>
+                                <li>Smart routing and optimization algorithms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <h2 class="section-title">About Richard Donohue</h2>
+                
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="images/richard.jpeg" alt="Small Batch Maps Logo" class="about-logo-image">
+                    </div>
+                    
+                    <div class="about-content">
+                        <h3 class="about-subtitle">Crafting Maps with Purpose</h3>
+                        <p class="about-text">
+                            With a background in Geography, GIS, and Cartography, I specialize in transforming complex geospatial data into meaningful insights and beautiful, functional maps. My approach combines traditional cartographic principles with cutting-edge AI-augmented workflows and web technologies.
+                        </p>
+                        <p class="about-text">
+                            I believe in ethical data practices and human-centered design. Every project is treated as a unique challenge, deserving custom solutions rather than cookie-cutter approaches. Whether you need sophisticated spatial analysis, interactive web applications, or AI-assisted workflows, I bring both technical expertise and creative vision to your geospatial challenges.
+                        </p>
+                        <p class="about-text">
+                            Based in the digital landscape, I work with clients globally to turn their spatial data into powerful tools for decision-making and storytelling.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            <p class="section-subtitle">Explore my applications of geospatial data science and web cartography.</p>
+            
+            <div class="projects-grid">
+                <div class="project-item" onclick="window.open('https://github.com/rgdonohue/urban-planning-project', '_blank')">
+                    <div class="project-icon">🏙</div>
+                    <h3 class="project-title">Urban Planning</h3>
+                    <p class="project-description">Interactive mapping tools for urban development and zoning analysis</p>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/rgdonohue/environmental-monitoring', '_blank')">
+                    <div class="project-icon">🌿</div>
+                    <h3 class="project-title">Environmental Monitoring</h3>
+                    <p class="project-description">Real-time environmental data visualization and trend analysis</p>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/rgdonohue/public-health-mapping', '_blank')">
+                    <div class="project-icon">🧠</div>
+                    <h3 class="project-title">Behavioral/Public Health</h3>
+                    <p class="project-description">Spatial analysis of health outcomes and behavioral patterns</p>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/rgdonohue/transportation-logistics', '_blank')">
+                    <div class="project-icon">🚛</div>
+                    <h3 class="project-title">Transportation Logistics</h3>
+                    <p class="project-description">Route optimization and logistics network analysis</p>
+                </div>
+                <div class="project-item" onclick="window.open('https://github.com/rgdonohue/natural-resources', '_blank')">
+                    <div class="project-icon">🌎</div>
+                    <h3 class="project-title">Natural Resource Management</h3>
+                    <p class="project-description">Sustainable resource allocation and conservation mapping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            
+            <div class="contact-wrapper">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3 class="contact-subtitle">Let's collaborate!</h3>
+                        <form id="contact-form" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" id="name" name="name" required class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" required class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="comment" class="form-label">Comment *</label>
+                                <textarea id="comment" name="comment" rows="4" required class="form-input" placeholder="Tell me about your project, goals, and any specific requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="cta-button cta-button-full cta-button-prominent">Send Message</button>
+                        </form>
+                        
+                        <p class="form-note">
+                            I typically respond within 24 hours. All consultations begin with a free discovery call to understand your needs.
+                        </p>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3 class="contact-subtitle">Connect</h3>
+                        
+                        <div class="contact-info-content">
+
+                            <div class="social-links">
+                                <a href="#" class="social-link" onclick="copyEmailToClipboard(event)"> 
+                                    <span class="social-icon">
+                                        <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4M20 18H4V8L12 13L20 8V18Z" />
+                                        </svg>
+                                    </span>
+                                    <span class="social-text">rgdonohue@gmail.com</span>
+                                </a>
+                                <a href="https://github.com/rgdonohue" class="social-link" target="_blank">
+                                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                
+                                <a href="https://instagram.com/rgdonohue" class="social-link" target="_blank">
+                                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                                    </svg>
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Small Batch Maps. Crafted with care for the geospatial community.</p>
+        </div>
+    </footer>
+
+    <!-- Hidden Notification Template -->
+    <div id="notification-template" class="hidden">
+        <div class="notification">
+            <span class="notification-icon"></span>
+            <span class="notification-message"></span>
+            <button class="notification-close">×</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

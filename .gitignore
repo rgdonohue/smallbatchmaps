@@ -1,0 +1,43 @@
+# Node modules (if any tooling is added)
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output (if any)
+dist/
+build/
+
+# Vercel deployment output
+.vercel/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Misc
+*.log
+
+# Ignore Mac system files
+Icon?
+
+# Ignore SASS/SCSS cache
+.sass-cache/
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
