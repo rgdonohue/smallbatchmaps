@@ -1,4 +1,4 @@
-/* Small Batch Maps - Vanilla CSS with Grid & Flexbox */
+/* Small Batch Maps - Artisanal Cartography meets Modern Web */
 
 /* =============================================================================
    CSS Reset & Base Styles
@@ -10,9 +10,15 @@
     box-sizing: border-box;
 }
 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    height: 100%;
 }
 
 body {
@@ -22,6 +28,8 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    position: relative;
 }
 
 /* =============================================================================
@@ -73,12 +81,37 @@ p {
    Utility Classes
    ============================================================================= */
 
+/* =============================================================================
+   Layout & Spacing Utilities
+   ============================================================================= */
+
 .container {
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 1rem;
 }
 
+.section-spacing { padding: var(--section-padding); }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Margin utilities */
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+
+/* Flex utilities */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 1rem; }
+.gap-2 { gap: 2rem; }
+
+/* Visibility utilities */
 .hidden {
     display: none !important;
 }
@@ -93,6 +126,25 @@ p {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--teal);
+    color: var(--warm-white);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 1001;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 6px;
 }
 
 /* =============================================================================
@@ -298,6 +350,21 @@ p {
     background: linear-gradient(135deg, rgba(245, 242, 232, 0.25) 0%, rgba(254, 252, 248, 0.25) 100%);
 }
 
+/* Add topographic line overlay */
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 45%, rgba(122, 139, 122, 0.08) 50%, transparent 55%),
+                linear-gradient(-45deg, transparent 45%, rgba(122, 139, 122, 0.05) 50%, transparent 55%);
+    z-index: 2;
+    animation: topographicFlow 20s infinite linear;
+    pointer-events: none;
+}
+
 .hero-content {
     position: relative;
     z-index: 10;
@@ -313,15 +380,16 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 5rem;
     margin-bottom: 0;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1.25rem;
 }
 
 .hero-logo {
-    height: 14rem;
+    height: 16rem;
     width: auto;
     transition: opacity var(--transition-slow);
     flex-shrink: 0;
@@ -339,6 +407,7 @@ p {
     flex: 1;
     max-width: 650px;
     gap: 0.5rem;
+    margin-left: 1rem;
 }
 
 .hero-title {
@@ -356,7 +425,7 @@ p {
     font-size: clamp(1.25rem, 4vw, 1.75rem);
     color: var(--sage);
     font-weight: 400;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     opacity: 0;
     line-height: 1.5;
     letter-spacing: 0.01em;
@@ -375,12 +444,20 @@ p {
     justify-content: center;
     animation: compassRotate 30s linear infinite;
     opacity: 0.3;
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+    cursor: pointer;
+}
+
+.compass-rose:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
 }
 
 .compass-rose::before {
     content: '✦';
     font-size: 1.5rem;
     color: var(--terracotta);
+    animation: compassNeedle 4s ease-in-out infinite;
 }
 
 @keyframes compassRotate {
@@ -402,10 +479,11 @@ p {
         flex-direction: column;
         gap: 2.5rem;
         text-align: center;
+        margin-top: 0.5rem;
     }
     
     .hero-logo {
-        height: 9rem;
+        height: 10rem;
     }
     
     .hero-text-content {
@@ -413,10 +491,11 @@ p {
         text-align: center;
         max-width: 100%;
         gap: 0.75rem;
+        margin-left: 0;
     }
     
     .hero-subtitle {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
     
     .hero-content .cta-button {
@@ -495,6 +574,10 @@ p {
     box-shadow: 0 8px 25px rgba(44, 95, 93, 0.2), 0 4px 10px rgba(44, 95, 93, 0.15);
 }
 
+.hero-content .cta-button:active {
+    animation: mapPinBounce 0.4s ease-out;
+}
+
 .cta-button:hover,
 .cta-button:focus {
     background-color: rgba(205, 92, 64, 0.9);
@@ -563,6 +646,76 @@ p {
 .fade-in-up.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* =============================================================================
+   Cartographic Micro-Interactions & Animations
+   ============================================================================= */
+
+/* Topographic line animation */
+@keyframes topographicFlow {
+    0% { 
+        transform: translateX(-100px) translateY(-20px);
+        opacity: 0.05;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% { 
+        transform: translateX(100px) translateY(20px);
+        opacity: 0.05;
+    }
+}
+
+/* Compass needle subtle movement */
+@keyframes compassNeedle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Map pin bounce for interactive elements */
+@keyframes mapPinBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-8px) scale(1.05); }
+}
+
+/* Contour line pulse for background elements */
+@keyframes contourPulse {
+    0%, 100% { 
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.2;
+        transform: scale(1.02);
+    }
+}
+
+/* Service card elevation effect */
+@keyframes cardElevate {
+    0% { 
+        transform: translateY(0) rotateX(0) rotateY(0);
+        box-shadow: var(--shadow-md);
+    }
+    100% { 
+        transform: translateY(-8px) rotateX(2deg) rotateY(2deg);
+        box-shadow: var(--shadow-xl);
+    }
+}
+
+/* Cartographic line drawing animation */
+@keyframes drawLine {
+    0% { 
+        stroke-dasharray: 0 100;
+        opacity: 0.3;
+    }
+    100% { 
+        stroke-dasharray: 100 0;
+        opacity: 0.8;
+    }
 }
 
 /* =============================================================================
@@ -643,6 +796,25 @@ p {
     position: relative;
     flex: 1;
     align-self: flex-start;
+    overflow: hidden;
+}
+
+.workflow-step::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(122, 139, 122, 0.05) 0%, transparent 70%);
+    animation: contourPulse 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.workflow-step > * {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -1104,11 +1276,31 @@ p {
     border: 1px solid rgba(122, 139, 122, 0.2);
     transition: all var(--transition-normal);
     cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(122, 139, 122, 0.05), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px) rotateX(2deg) rotateY(2deg);
+    box-shadow: var(--shadow-xl);
+}
+
+.service-card:hover::before {
+    left: 100%;
 }
 
 .service-card:hover .learn-more-btn {
@@ -1117,17 +1309,22 @@ p {
 
 .service-icon {
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 .icon {
     width: 3rem;
     height: 3rem;
     color: var(--terracotta);
-    transition: transform var(--transition-normal);
+    transition: all var(--transition-normal);
+    filter: drop-shadow(0 2px 4px rgba(205, 92, 64, 0.1));
 }
 
 .service-card:hover .icon {
+    animation: mapPinBounce 0.6s ease-out;
     transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(205, 92, 64, 0.2));
 }
 
 .workflow-icon {
@@ -1300,6 +1497,59 @@ p {
 textarea.form-input {
     resize: vertical;
     min-height: 100px;
+}
+
+/* Form validation styles */
+.field-error {
+    color: var(--terracotta);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    min-height: 1.25rem;
+    display: block;
+}
+
+.field-help {
+    color: rgba(44, 95, 93, 0.7);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-input.error {
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 2px rgba(205, 92, 64, 0.2);
+}
+
+.form-input.success {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 2px rgba(122, 139, 122, 0.2);
+}
+
+.form-input.error:focus {
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(205, 92, 64, 0.3);
+}
+
+.form-input.success:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(122, 139, 122, 0.3);
+}
+
+/* Button loading state */
+.button-loading {
+    display: none;
+}
+
+.cta-button.loading .button-text {
+    display: none;
+}
+
+.cta-button.loading .button-loading {
+    display: inline;
+}
+
+.cta-button.loading {
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
 .form-note {
@@ -2239,12 +2489,18 @@ a:focus {
     text-align: center;
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 .project-item:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px) rotateX(1deg) rotateY(1deg);
     box-shadow: var(--shadow-lg);
     background-color: rgba(255, 255, 255, 0.95);
+}
+
+.project-item:focus {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 2px;
 }
 
 .project-item::before {
@@ -2266,6 +2522,14 @@ a:focus {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     display: block;
+    color: var(--terracotta);
+    transition: all var(--transition-normal);
+    filter: drop-shadow(0 2px 4px rgba(205, 92, 64, 0.1));
+}
+
+.project-item:hover .project-icon {
+    animation: mapPinBounce 0.6s ease-out;
+    filter: drop-shadow(0 4px 8px rgba(205, 92, 64, 0.2));
 }
 
 .project-title {

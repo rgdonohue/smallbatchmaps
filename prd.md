@@ -209,4 +209,6 @@ Build a [section name] that:
 
 ---
 
-*This PRD covers everything needed for a clean, effective static website that showcases your geospatial services and converts visitors to leads.*
+_Map lines trace the earth,  
+Stories woven, paths revealed—  
+Art in every chart._

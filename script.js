@@ -1,5 +1,78 @@
 // Small Batch Maps - Interactive JavaScript
 
+// Namespace for all SBM functionality
+window.SBM = {
+    // Debounce utility for performance
+    debounce: function(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    },
+
+    // Scroll to section utility
+    scrollToSection: function(sectionId) {
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            const headerHeight = 80;
+            const targetPosition = targetSection.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    },
+
+    // Handle keyboard navigation for project items
+    handleProjectKeydown: function(event, url) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            window.open(url, '_blank');
+        }
+    },
+
+    // Show notification function
+    showNotification: function(message, type = 'info') {
+        const template = document.getElementById('notification-template');
+        if (!template) return;
+        
+        const notification = template.querySelector('.notification').cloneNode(true);
+        
+        // Set up notification
+        notification.classList.add(type);
+        notification.querySelector('.notification-message').textContent = message;
+        
+        // Add close functionality
+        const closeBtn = notification.querySelector('.notification-close');
+        closeBtn.addEventListener('click', function() {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+        });
+        
+        // Add to DOM
+        document.body.appendChild(notification);
+        
+        // Animate in
+        setTimeout(() => {
+            notification.classList.add('show');
+        }, 100);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentElement) {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 5000);
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -9,8 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const hero = document.querySelector('#hero');
 
     mobileMenuBtn.addEventListener('click', function() {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('hidden');
         hamburger.classList.toggle('active');
+        
+        // Focus management for accessibility
+        if (!isExpanded) {
+            // Menu is opening, focus first link
+            const firstLink = mobileMenu.querySelector('.nav-link');
+            if (firstLink) {
+                setTimeout(() => firstLink.focus(), 100);
+            }
+        }
     });
 
     // Close mobile menu when clicking on nav links
@@ -19,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             mobileMenu.classList.add('hidden');
             hamburger.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
         });
     });
 
@@ -100,33 +185,131 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Contact form handling with Formspree
+    // Form validation utilities
+    const formValidation = {
+        validateName: function(value) {
+            if (!value.trim()) return 'Name is required';
+            if (value.trim().length < 2) return 'Name must be at least 2 characters';
+            return null;
+        },
+
+        validateEmail: function(value) {
+            if (!value.trim()) return 'Email is required';
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) return 'Please enter a valid email address';
+            return null;
+        },
+
+        validateComment: function(value) {
+            if (!value.trim()) return 'Comment is required';
+            if (value.trim().length < 10) return 'Please provide more details (at least 10 characters)';
+            return null;
+        },
+
+        showFieldError: function(field, message) {
+            const errorElement = document.getElementById(field.id + '-error');
+            if (errorElement) {
+                errorElement.textContent = message;
+                field.classList.add('error');
+                field.classList.remove('success');
+                field.setAttribute('aria-invalid', 'true');
+            }
+        },
+
+        clearFieldError: function(field) {
+            const errorElement = document.getElementById(field.id + '-error');
+            if (errorElement) {
+                errorElement.textContent = '';
+                field.classList.remove('error');
+                field.classList.add('success');
+                field.setAttribute('aria-invalid', 'false');
+            }
+        },
+
+        validateField: function(field) {
+            let validator;
+            switch(field.id) {
+                case 'name':
+                    validator = this.validateName;
+                    break;
+                case 'email':
+                    validator = this.validateEmail;
+                    break;
+                case 'comment':
+                    validator = this.validateComment;
+                    break;
+                default:
+                    return true;
+            }
+
+            const error = validator(field.value);
+            if (error) {
+                this.showFieldError(field, error);
+                return false;
+            } else {
+                this.clearFieldError(field);
+                return true;
+            }
+        }
+    };
+
+    // Add real-time validation to form fields
+    const formFields = document.querySelectorAll('#contact-form .form-input');
+    formFields.forEach(field => {
+        // Validate on blur (when user leaves field)
+        field.addEventListener('blur', function() {
+            formValidation.validateField(this);
+        });
+
+        // Clear error on input (as user types)
+        field.addEventListener('input', function() {
+            if (this.classList.contains('error')) {
+                // Only clear error state, don't validate until blur
+                this.classList.remove('error');
+                const errorElement = document.getElementById(this.id + '-error');
+                if (errorElement) {
+                    errorElement.textContent = '';
+                }
+                this.setAttribute('aria-invalid', 'false');
+            }
+        });
+    });
+
+    // Contact form handling with Web3Forms
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
+        // Validate all fields before submission
+        let isValid = true;
+        formFields.forEach(field => {
+            if (!formValidation.validateField(field)) {
+                isValid = false;
+            }
+        });
+
+                 if (!isValid) {
+            SBM.showNotification('Please correct the errors above and try again.', 'error');
+            // Focus first invalid field
+            const firstError = this.querySelector('.form-input.error');
+            if (firstError) {
+                firstError.focus();
+            }
+            return;
+        }
+        
         // Add loading state
         const submitButton = this.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
+        const buttonText = submitButton.querySelector('.button-text');
+        const buttonLoading = submitButton.querySelector('.button-loading');
+        
         submitButton.classList.add('loading');
-        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
         
         // Collect form data
         const formData = new FormData(this);
         
-        // Validate required fields
-        const name = formData.get('name')?.trim();
-        const email = formData.get('email')?.trim();
-        const comment = formData.get('comment')?.trim();
-        
-        if (!name || !email || !comment) {
-            showNotification('Please fill in all required fields.', 'error');
-            submitButton.classList.remove('loading');
-            submitButton.textContent = originalText;
-            return;
-        }
-        
-        // Submit to Formspree
+        // Submit to Web3Forms
         fetch(this.action, {
             method: 'POST',
             body: formData,
@@ -137,14 +320,25 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => {
             // Remove loading state
             submitButton.classList.remove('loading');
-            submitButton.textContent = originalText;
+            submitButton.disabled = false;
             
             if (response.ok) {
-                // Reset form
+                // Reset form and clear all validation states
                 this.reset();
+                formFields.forEach(field => {
+                    field.classList.remove('success', 'error');
+                    field.setAttribute('aria-invalid', 'false');
+                    const errorElement = document.getElementById(field.id + '-error');
+                    if (errorElement) {
+                        errorElement.textContent = '';
+                    }
+                });
                 
                 // Show success message
                 showNotification('Thank you! Your message has been sent. I\'ll get back to you within 24 hours.', 'success');
+                
+                // Focus back to the form for screen reader users
+                contactForm.focus();
             } else {
                 response.json().then(data => {
                     if (Object.hasOwnProperty.call(data, 'errors')) {
@@ -158,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             // Remove loading state
             submitButton.classList.remove('loading');
-            submitButton.textContent = originalText;
+            submitButton.disabled = false;
             
             showNotification('Oops! There was a problem submitting your form', 'error');
         });
@@ -230,84 +424,70 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Throttled scroll listener
-    let scrollTimer = null;
-    window.addEventListener('scroll', function() {
-        if (scrollTimer !== null) {
-            clearTimeout(scrollTimer);
-        }
-        scrollTimer = setTimeout(() => {
-            updateActiveNav();
-            updateHeroLogoVisibility();
-        }, 50);
-    });
+    // Optimized scroll listener using debounce
+    const debouncedScrollHandler = SBM.debounce(() => {
+        updateActiveNav();
+        updateHeroLogoVisibility();
+    }, 16); // ~60fps
+    
+    window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
 
-    // Show notification using HTML template
-    function showNotification(message, type = 'info') {
-        const template = document.getElementById('notification-template');
-        const notification = template.querySelector('.notification').cloneNode(true);
-        
-        // Set up notification
-        notification.classList.add(type);
-        notification.querySelector('.notification-message').textContent = message;
-        
-        // Add close functionality
-        const closeBtn = notification.querySelector('.notification-close');
-        closeBtn.addEventListener('click', function() {
-            notification.classList.remove('show');
-            setTimeout(() => notification.remove(), 300);
-        });
-        
-        // Add to DOM
-        document.body.appendChild(notification);
-        
-        // Animate in
-        setTimeout(() => {
-            notification.classList.add('show');
-        }, 100);
-        
-        // Auto remove after 5 seconds
-        setTimeout(() => {
-            if (notification.parentElement) {
-                notification.classList.remove('show');
-                setTimeout(() => notification.remove(), 300);
-            }
-        }, 5000);
-    }
+    // Make showNotification available globally for backward compatibility
+    window.showNotification = SBM.showNotification;
 
-    // Make showNotification available globally
-    window.showNotification = showNotification;
-
-    // Keyboard navigation improvements
+    // Enhanced keyboard navigation
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             // Close mobile menu
             if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
                 hamburger.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                // Return focus to menu button
+                mobileMenuBtn.focus();
             }
             
             // Close expanded service section
             if (serviceExpansion && !serviceExpansion.classList.contains('hidden')) {
-                serviceExpansion.classList.remove('show');
-                setTimeout(() => {
-                    serviceExpansion.classList.add('hidden');
-                }, 300);
+                closeServiceExpansion();
+                // Return focus to the expanded service button
+                const expandedButton = document.querySelector('.learn-more-btn[aria-expanded="true"]');
+                if (expandedButton) {
+                    expandedButton.focus();
+                }
             }
+        }
+        
+        // Handle Enter and Space for project items (already handled in HTML with onkeydown)
+        // Handle Tab navigation for better accessibility
+        if (e.key === 'Tab') {
+            // Let the browser handle tab navigation naturally
+            // This ensures proper focus order
         }
     });
 
-    // Parallax effect for hero section (subtle)
-    if (hero) {
-        window.addEventListener('scroll', function() {
+    // Parallax effect for hero section (subtle) - integrated with main scroll handler
+    function updateParallax() {
+        if (hero) {
             const scrolled = window.pageYOffset;
             const parallax = scrolled * 0.5;
             const heroBackground = hero.querySelector('.hero-bg');
             if (heroBackground) {
                 heroBackground.style.transform = `translateY(${parallax}px)`;
             }
-        });
+        }
     }
+    
+    // Update the scroll handler to include parallax
+    const debouncedScrollHandlerWithParallax = SBM.debounce(() => {
+        updateActiveNav();
+        updateHeroLogoVisibility();
+        updateParallax();
+    }, 16); // ~60fps
+    
+    // Replace the previous scroll handler
+    window.removeEventListener('scroll', debouncedScrollHandler);
+    window.addEventListener('scroll', debouncedScrollHandlerWithParallax, { passive: true });
 
     // Initialize active navigation
     updateActiveNav();
@@ -321,14 +501,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle service card clicks (entire card is clickable)
     serviceCards.forEach(card => {
         card.addEventListener('click', function() {
-            const serviceType = this.querySelector('.learn-more-btn').getAttribute('data-service');
+            const button = this.querySelector('.learn-more-btn');
+            const serviceType = button.getAttribute('data-service');
             const serviceTitle = this.getAttribute('data-title');
-            showServiceExpansion(serviceType, serviceTitle);
+            showServiceExpansion(serviceType, serviceTitle, button);
         });
     });
 
     // Show service expansion with proper scroll positioning
-    function showServiceExpansion(serviceType, serviceTitle) {
+    function showServiceExpansion(serviceType, serviceTitle, button) {
+        // Update ARIA states for all buttons first
+        document.querySelectorAll('.learn-more-btn').forEach(btn => {
+            btn.setAttribute('aria-expanded', 'false');
+        });
+        
         // Hide all content sections first
         const allContent = document.querySelectorAll('.expansion-content');
         allContent.forEach(content => content.classList.add('hidden'));
@@ -337,6 +523,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedContent = document.getElementById(serviceType + '-content');
         if (selectedContent) {
             selectedContent.classList.remove('hidden');
+        }
+        
+        // Update ARIA state for the clicked button
+        if (button) {
+            button.setAttribute('aria-expanded', 'true');
         }
         
         // Update title from data attribute
@@ -358,6 +549,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: expansionTop,
                     behavior: 'smooth'
                 });
+                
+                // Focus the expansion for screen reader users
+                serviceExpansion.focus();
             }, 200);
         }, 10);
     }
@@ -365,6 +559,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close expansion functionality
     function closeServiceExpansion() {
         if (serviceExpansion && !serviceExpansion.classList.contains('hidden')) {
+            // Reset all ARIA states
+            document.querySelectorAll('.learn-more-btn').forEach(btn => {
+                btn.setAttribute('aria-expanded', 'false');
+            });
+            
             // First scroll back to services section
             const servicesSection = document.getElementById('services');
             if (servicesSection) {
@@ -421,22 +620,13 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveNav();
 });
 
-// Global scroll function for CTA button
+// Keep legacy function for backwards compatibility, but redirect to namespaced version
 function scrollToSection(sectionId) {
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        const headerHeight = 80;
-        const targetPosition = targetSection.offsetTop - headerHeight;
-        
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    }
+    SBM.scrollToSection(sectionId);
 }
 
-// Global function for copying email to clipboard
-function copyEmailToClipboard(event) {
+// Add to SBM namespace
+SBM.copyEmailToClipboard = function(event) {
     event.preventDefault();
     
     const email = 'rgdonohue@gmail.com';
@@ -444,7 +634,7 @@ function copyEmailToClipboard(event) {
     // Try to use the modern Clipboard API first
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(email).then(() => {
-            window.showNotification('Email copied to clipboard!', 'success');
+            SBM.showNotification('Email copied to clipboard!', 'success');
         }).catch(err => {
             console.error('Failed to copy email: ', err);
             fallbackCopyTextToClipboard(email);
@@ -453,6 +643,11 @@ function copyEmailToClipboard(event) {
         // Fallback for older browsers or non-secure contexts
         fallbackCopyTextToClipboard(email);
     }
+};
+
+// Global function for copying email to clipboard (legacy compatibility)
+function copyEmailToClipboard(event) {
+    SBM.copyEmailToClipboard(event);
 }
 
 // Fallback function for copying text to clipboard
@@ -473,17 +668,51 @@ function fallbackCopyTextToClipboard(text) {
     try {
         const successful = document.execCommand('copy');
         if (successful) {
-            window.showNotification('Email copied to clipboard!', 'success');
+            SBM.showNotification('Email copied to clipboard!', 'success');
         } else {
-            window.showNotification('Failed to copy email. Please copy manually: rgdonohue@gmail.com', 'error');
+            SBM.showNotification('Failed to copy email. Please copy manually: rgdonohue@gmail.com', 'error');
         }
     } catch (err) {
         console.error('Fallback: Oops, unable to copy', err);
-        window.showNotification('Failed to copy email. Please copy manually: rgdonohue@gmail.com', 'error');
+        SBM.showNotification('Failed to copy email. Please copy manually: rgdonohue@gmail.com', 'error');
     }
     
     document.body.removeChild(textArea);
 }
+
+// Add cartographic animation enhancements when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Add subtle cartographic interactions to workflow steps
+    const workflowSteps = document.querySelectorAll('.workflow-step');
+    workflowSteps.forEach((step, index) => {
+        // Stagger the initial animation slightly
+        step.style.animationDelay = `${index * 0.1}s`;
+        
+        // Add hover enhancement for cartographic feel
+        step.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) rotateX(2deg) rotateY(2deg)';
+        });
+        
+        step.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+    });
+    
+    // Enhanced compass rose interactivity
+    const compassRose = document.querySelector('.compass-rose');
+    if (compassRose) {
+        let compassRotation = 0;
+        
+        compassRose.addEventListener('click', function() {
+            compassRotation += 45;
+            this.style.transform = `rotate(${compassRotation}deg) scale(1.1)`;
+            
+            setTimeout(() => {
+                this.style.transform = `rotate(${compassRotation}deg)`;
+            }, 200);
+        });
+    }
+});
 
 // Preload images and resources
 window.addEventListener('load', function() {
