@@ -6,11 +6,9 @@
     <title>Small Batch Maps - Bespoke Cartography for the Digital Age</title>
     <meta name="description" content="AI-assisted GIS solutions with a human touch. Professional geospatial data science, web cartography, and AI-assisted workflows.">
     
-    <!-- Preload critical fonts for performance -->
+    <!-- Font optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -21,9 +19,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
     <!-- Fixed Header -->
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -104,9 +99,12 @@
                         </svg>
                     </div>
                     <h3 class="service-title">Geospatial Data Science</h3>
-                    <p class="service-description">Data wrangling and cleaning, advanced spatial analysis to reveal patterns unlock insights from your geographic data.</p>
+                    <p class="service-description">
+                        I use Python, libraries such as geopandas, and Jupyter notebooks to turn messy, inconsistent geospatial data into transparent, decision-ready intelligence. Whether wrangling shapefiles full of null values or identifying trends across thousands of records, I build reproducible workflows that reveal the patterns others miss. 
+                    </p>
+
                     <button class="learn-more-btn" data-service="geospatial" aria-expanded="false" aria-controls="geospatial-content" aria-describedby="geospatial-desc">
-                        Learn More
+                        See how it works <span aria-hidden="true" style="font-size:1.1em;vertical-align:middle;">&#8594;</span>
                     </button>
                     <span id="geospatial-desc" class="sr-only">Expand to see detailed information about geospatial data science services</span>
                 </article>
@@ -119,7 +117,9 @@
                         </svg>
                     </div>
                     <h3 class="service-title">Web Cartography</h3>
-                    <p class="service-description">Custom interactive maps and dashboards that tell compelling stories with your spatial data.</p>
+                    <p class="service-description">
+                        With a background in UX design and spatial storytelling, I create web maps and dashboards that look sharp, load fast, and connect with real users. Whether it's a climate dashboard or a conservation advocacy tool, I blend visual clarity with emotional impact—so your audience sees not just the data, but what it means.
+                    </p>
                     <button class="learn-more-btn" data-service="cartography" aria-expanded="false" aria-controls="cartography-content" aria-describedby="cartography-desc">
                         Learn More
                     </button>
@@ -136,7 +136,9 @@
                         </svg>
                     </div>
                     <h3 class="service-title">AI-Assisted Workflows</h3>
-                    <p class="service-description">Cutting-edge automation and AI integration to streamline your geospatial operations.</p>
+                    <p class="service-description">
+                        I integrate cutting-edge tools—like large language models (LLMs), spatial automations, and intelligent agents—into GIS workflows to save time, reduce friction, and scale impact. From code-writing copilots to automated report generators, I design systems that do more with less effort—without compromising clarity or control.
+                    </p>
                     <button class="learn-more-btn" data-service="ai-workflows" aria-expanded="false" aria-controls="ai-workflows-content" aria-describedby="ai-workflows-desc">
                         Learn More
                     </button>
@@ -160,13 +162,12 @@
                     <div class="geospatial-expansion">
                         <!-- Section Intro -->
                         <div class="geo-header">
-                            <p class="geo-intro"><strong>Geospatial Data Science</strong> combines the power of location with data analysis to uncover patterns, trends, and relationships in the world around us.
-                                It transforms messy spatial data into actionable insights—using tools like Python, statistics, and machine learning—to support smarter decisions in planning, policy, logistics, public health, and more.</p>
+                            <p class="geo-intro"><strong>Exploratory Geospatial Data Science (ESDA)</strong> brings together location intelligence and exploratory data analysis to uncover patterns, trends, and relationships in our built and natural worlds. I help clients turn messy, siloed datasets into clean, interoperable formats and curated insights—ready to inform smarter decisions in planning, policy, logistics, public health, and client-specific needs. 
                         </div>
 
                         <!-- Visual Workflow -->
                         <div class="workflow-section">
-                            <h3 class="workflow-title">My process for geospatial data science: from messy data to mapping insights</h3>
+                            <h3 class="workflow-title">From Raw to Real: My Spatial Science Process</h3>
                             <div class="workflow-pipeline">
                                 <div class="workflow-step">
                                     <h4>Raw Geographic Data</h4>
@@ -175,7 +176,7 @@
                                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                                         </svg>
                                     </div>
-                                    <p>Spatial datasets, APIs, sensors</p>
+                                    <p>Spatial datasets, APIs, field colectiion inputs</p>
                                 </div>
                                 
                                 <div class="workflow-step">
@@ -185,7 +186,7 @@
                                             <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
                                         </svg>
                                     </div>
-                                    <p>Python + Jupyter for ESDA &amp; ETL</p>
+                                    <p>Python + Jupyter for wrangling, exploratory analysis, and QA/QC</p>
                                 </div>
                                 
                                 <div class="workflow-step">
@@ -195,7 +196,7 @@
                                             <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
                                         </svg>
                                     </div>
-                                    <p>Beautiful charts &amp; spatial visualizations</p>
+                                    <p>Clear charts, spatial stats, and storytelling visuals</p>
                                 </div>
                                 
                                 <div class="workflow-step">
@@ -205,7 +206,7 @@
                                             <path d="M20 6L10 12L2 6V4L10 10L20 4V6Z"/>
                                         </svg>
                                     </div>
-                                    <p>Fast data APIs &amp; spatial databases</p>
+                                    <p>Fast APIs, spatial databases, and reproducible pipelines</p>
                                 </div>
                                 
                                 <div class="workflow-step">
@@ -215,7 +216,7 @@
                                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                         </svg>
                                     </div>
-                                    <p>Custom UX/UI for your users</p>
+                                    <p>Custom UX/UI for intuitive data exploration</p>
                                 </div>
                             </div>
                         </div>
@@ -263,43 +264,156 @@
                 
                 <!-- Web Cartography Content -->
                 <div id="cartography-content" class="expansion-content hidden">
-                    <div class="service-details-expanded">
-                        <div class="service-overview">
-                            <p class="service-intro">Create compelling, interactive web maps and dashboards that transform complex spatial data into clear, engaging visual stories. I specialize in custom cartographic solutions that combine aesthetic appeal with functional excellence.</p>
-                        </div>
+                    <div class="cartography-expansion">
+                        <!-- Topographic Background -->
+                        <div class="topo-background" aria-hidden="true"></div>
                         
-                        <div class="service-capabilities">
-                            <h4 class="capability-title">Technical Expertise</h4>
-                            <div class="capabilities-grid">
-                                <div class="capability-item">
-                                    <h5>Interactive Web Maps</h5>
-                                    <p>Custom-built interactive maps using modern libraries like MapLibre GL JS, Leaflet, and Mapbox. Optimized for performance and user experience across all devices.</p>
+                        <!-- Section Intro -->
+                        <div class="carto-header">
+                            <p class="carto-intro">Create compelling, interactive web maps and dashboards that transform complex spatial data into clear, engaging visual stories. I specialize in custom cartographic solutions that combine aesthetic appeal with functional excellence.</p>
+                        </div>
+
+                        <!-- Hero Feature Card -->
+                        <div class="hero-feature-container">
+                            <div class="trail-connector trail-start" aria-hidden="true"></div>
+                            <article class="capability-card hero-card">
+                                <div class="card-elevation" aria-hidden="true"></div>
+                                <div class="capability-icon hero-icon">
+                                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="Interactive web maps icon">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M12 1L8.41 4.59L12 8.18L15.59 4.59L12 1z"/>
+                                        <path d="M12 15.82L8.41 19.41L12 23L15.59 19.41L12 15.82z"/>
+                                        <path d="M15.82 12L19.41 8.41L23 12L19.41 15.59L15.82 12z"/>
+                                        <path d="M8.18 12L4.59 8.41L1 12L4.59 15.59L8.18 12z"/>
+                                    </svg>
                                 </div>
-                                <div class="capability-item">
-                                    <h5>Data Visualization Dashboards</h5>
-                                    <p>Comprehensive dashboards that integrate multiple data sources, real-time updates, and interactive controls for exploring complex spatial datasets.</p>
+                                <h3 class="capability-title">Interactive Web Maps</h3>
+                                <p class="capability-description">Custom-built interactive maps using modern libraries like MapLibre GL JS, Leaflet, and Mapbox. Optimized for performance and user experience across all devices with dynamic layer switching, real-time data integration, and smooth pan/zoom interactions.</p>
+                                <div class="feature-badges">
+                                    <span class="badge">Real-time Data</span>
+                                    <span class="badge">Multi-layer</span>
+                                    <span class="badge">Mobile-first</span>
                                 </div>
-                                <div class="capability-item">
-                                    <h5>Responsive Design</h5>
-                                    <p>Mobile-first approach ensuring your maps and applications work seamlessly across desktop, tablet, and mobile devices with intuitive touch controls.</p>
+                            </article>
+                        </div>
+
+                        <!-- Staggered Timeline Cards -->
+                        <div class="timeline-container">
+                            <!-- Card 1 - Left -->
+                            <div class="timeline-item left">
+                                <div class="timeline-connector" aria-hidden="true">
+                                    <div class="connector-node"></div>
+                                    <div class="connector-line"></div>
                                 </div>
-                                <div class="capability-item">
-                                    <h5>Custom Styling &amp; Branding</h5>
-                                    <p>Tailored visual design that matches your brand identity, including custom map styles, color schemes, and user interface elements.</p>
+                                <article class="capability-card">
+                                    <div class="card-elevation" aria-hidden="true"></div>
+                                    <div class="capability-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="Data visualization dashboard icon">
+                                            <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                                            <circle cx="19" cy="12" r="2"/>
+                                            <path d="M12 8L10 6H8L12 10L16 6H14L12 8Z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="capability-title">Data Visualization Dashboards</h4>
+                                    <p class="capability-description">Comprehensive dashboards that integrate multiple data sources, real-time updates, and interactive controls for exploring complex spatial datasets.</p>
+                                </article>
+                            </div>
+
+                            <!-- Card 2 - Right -->
+                            <div class="timeline-item right">
+                                <div class="timeline-connector" aria-hidden="true">
+                                    <div class="connector-node"></div>
+                                    <div class="connector-line"></div>
+                                </div>
+                                <article class="capability-card">
+                                    <div class="card-elevation" aria-hidden="true"></div>
+                                    <div class="capability-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="Responsive design icon">
+                                            <path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM7 4V3h10v1H7zm0 14V6h10v12H7zm0 3v-1h10v1H7z"/>
+                                            <rect x="9" y="8" width="6" height="4"/>
+                                            <path d="M12 13L10 15H14L12 13Z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="capability-title">Responsive Design</h4>
+                                    <p class="capability-description">Mobile-first approach ensuring your maps and applications work seamlessly across desktop, tablet, and mobile devices with intuitive touch controls.</p>
+                                </article>
+                            </div>
+
+                            <!-- Card 3 - Left -->
+                            <div class="timeline-item left">
+                                <div class="timeline-connector" aria-hidden="true">
+                                    <div class="connector-node"></div>
+                                    <div class="connector-line"></div>
+                                </div>
+                                <article class="capability-card">
+                                    <div class="card-elevation" aria-hidden="true"></div>
+                                    <div class="capability-icon">
+                                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="Custom styling and branding icon">
+                                            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8z"/>
+                                            <circle cx="6.5" cy="11.5" r="1.5"/>
+                                            <circle cx="9.5" cy="7.5" r="1.5"/>
+                                            <circle cx="14.5" cy="7.5" r="1.5"/>
+                                            <circle cx="17.5" cy="11.5" r="1.5"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="capability-title">Custom Styling &amp; Branding</h4>
+                                    <p class="capability-description">Tailored visual design that matches your brand identity, including custom map styles, color schemes, and user interface elements.</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Winding Divider -->
+                        <div class="winding-divider" aria-hidden="true">
+                            <svg viewBox="0 0 100 20" class="divider-svg">
+                                <path d="M0,10 Q25,5 50,10 T100,10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="20" cy="8" r="2" fill="currentColor"/>
+                                <circle cx="50" cy="10" r="2" fill="currentColor"/>
+                                <circle cx="80" cy="12" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+
+                        <!-- Project Applications -->
+                        <div class="applications-showcase">
+                            <h4 class="applications-title">Project Applications</h4>
+                            <div class="applications-cards">
+                                <div class="app-card">
+                                    <div class="app-icon">🏢</div>
+                                    <span>Real Estate Platforms</span>
+                                </div>
+                                <div class="app-card">
+                                    <div class="app-icon">🌿</div>
+                                    <span>Environmental Monitoring</span>
+                                </div>
+                                <div class="app-card">
+                                    <div class="app-icon">🚌</div>
+                                    <span>Public Transit Apps</span>
+                                </div>
+                                <div class="app-card">
+                                    <div class="app-icon">📊</div>
+                                    <span>Business Intelligence</span>
+                                </div>
+                                <div class="app-card">
+                                    <div class="app-icon">📚</div>
+                                    <span>Educational Tools</span>
+                                </div>
+                                <div class="app-card">
+                                    <div class="app-icon">🚨</div>
+                                    <span>Emergency Response</span>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="service-applications">
-                            <h4 class="applications-title">Project Types</h4>
-                            <ul class="applications-list">
-                                <li>Real estate and property visualization platforms</li>
-                                <li>Environmental monitoring dashboards</li>
-                                <li>Public transit and transportation apps</li>
-                                <li>Business intelligence and analytics tools</li>
-                                <li>Educational and storytelling applications</li>
-                                <li>Emergency response and disaster management systems</li>
-                            </ul>
+
+                        <!-- CTA Section -->
+                        <div class="carto-cta-section">
+                            <div class="carto-cta-buttons">
+                                <button class="cta-button cta-primary" onclick="scrollToSection('contact')">
+                                    Start Your Project
+                                </button>
+                                <button class="cta-button cta-secondary" onclick="window.open('https://github.com/smallbatchmaps', '_blank')">
+                                    View Portfolio
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -370,7 +484,7 @@
                             I believe in ethical data practices and human-centered design. Every project is treated as a unique challenge, deserving custom solutions rather than cookie-cutter approaches. Whether you need sophisticated spatial analysis, interactive web applications, or AI-assisted workflows, I bring both technical expertise and creative vision to your geospatial challenges.
                         </p>
                         <p class="about-text">
-                            Based in the US Mountain West, I work with clients globally to turn their spatial data into powerful tools for decision-making and storytelling.
+                            Born and raised in Durango, CO, and now based in the US Mountain West, I work with clients globally to turn their spatial data into powerful tools for decision-making and storytelling.
                         </p>
                     </div>
                 </div>
