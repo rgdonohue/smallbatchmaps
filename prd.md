@@ -1,214 +1,166 @@
 # Small Batch Maps - Product Requirements Document
 
-**Version:** 1.0  
-**Project:** Simple Static Website for Geospatial Consultancy  
+**Version:** 2.0  
+**Project:** Professional Consultancy Website  
+**Business:** Bespoke Cartography for the Digital Age
 
 ---
 
-## Project Overview
+## Business Overview
 
-A clean, single-page website for Small Batch Maps with four main sections. The site showcases artisanal cartography services with a focus on converting visitors to consultation requests.
+Small Batch Maps is a specialized geospatial consultancy led by Richard Donohue (Ph.D. Geography, GIS, and Cartography). He transforms complex geospatial data into meaningful insights and beautiful, functional maps through AI-assisted GIS solutions with a human touch.
 
-**Goal:** Professional web presence that generates leads for geospatial consulting services.
+**Primary Business Goal:** Generate qualified leads for high-value geospatial consulting projects through professional web presence and thought leadership.
 
----
-
-## Design System
-
-### Brand Colors (from mockup)
-- **Terracotta Orange:** `#CD5C40` (CTAs, accents)
-- **Sage Green:** `#7A8B7A` (secondary elements)
-- **Cream:** `#F5F2E8` (backgrounds)
-- **Deep Teal:** `#2C5F5D` (text, headers)
-- **Warm White:** `#FEFCF8` (cards, highlights)
-
-### Typography
-- **Headers:** Playfair Display (serif, elegant)
-- **Body:** Inter (clean, readable)
-- **Accent:** JetBrains Mono (technical elements)
-
-### Visual Style
-- Organic, topographic-inspired shapes
-- Subtle contour line elements
-- Compass rose motifs
-- Earth tone palette
-- Handcrafted feel with modern tech
+**Target Audience:** 
+- Environmental organizations and NGOs
+- Urban planning departments
+- Research institutions
+- Technology companies with spatial data needs
+- Government agencies
+- Private sector clients requiring spatial analysis
 
 ---
 
-## Site Structure
+## Service Portfolio
 
-### Single Page Layout
-1. **Hero Section** - Brand intro + main CTA
-2. **Services Section** - 3 service cards
-3. **About Section** - Personal bio
-4. **Contact Section** - Form + social links
+### 1. Geospatial Data Science
+**Value Proposition:** Turn messy, inconsistent geospatial data into transparent, decision-ready intelligence.
 
-### Navigation
-- Fixed header with smooth scroll to sections
-- Mobile hamburger menu
-- Logo links to top
+**Core Offerings:**
+- Exploratory Spatial Data Analysis (ESDA)
+- AI-assisted predictive modeling
+- Time-series & spatiotemporal modeling  
+- Data integration & API design
+- Python + Jupyter workflows
+- Spatial databases and scalable pipelines
 
----
+**Target Projects:** Research studies, policy analysis, environmental monitoring, urban planning insights
 
-## Section Requirements
+### 2. Web Cartography  
+**Value Proposition:** Interactive web maps and dashboards that transform complex spatial data into clear, engaging visual stories.
 
-### 1. Hero Section
-**Content:**
-- Main headline: "Bespoke Cartography for the Digital Age"
-- Subheadline: "AI-powered GIS solutions with a human touch"
-- Background: Artistic topographic map illustration (like mockup)
-- Primary CTA: "Explore Services" (scrolls to services)
+**Core Capabilities:**
+- **Spatial Dashboards** - Custom interfaces for exploring complex geospatial datasets, optimized for clarity, performance, and decision-making
+- **Cartographic Map Design** - Tailored map styles, symbology, and interactions that reinforce your data story and visual identity
+- **Real-Time & Multi-Source Data** - Integrates live feeds, raster imagery, and vector data for dynamic visualizations
+- **Responsive Geovisual UX** - Map UIs that work intuitively across desktop, tablet, and mobile, with smooth gestures and thoughtful controls
 
-**Visual Elements:**
-- Large topographic background illustration
-- Compass rose accent
-- Organic contour line patterns
+**Technology Stack:** MapLibre GL JS, Leaflet, Mapbox, modern web frameworks
 
-### 2. Services Section
-**Three Service Cards:**
+**Target Projects:** Environmental dashboards, urban planning tools, real estate platforms, conservation advocacy, public transit apps
 
-**Card 1: Geospatial Data Science**
-- Icon: Data/analytics symbol
-- Brief description
-- "Learn More" button → expands to show:
-  - AI-assisted geoprocessing
-  - Spatial prediction modeling
-  - Time-series analysis
-  - ESDA (Exploratory Spatial Data Analysis)
+### 3. AI-Assisted Workflows
+**Value Proposition:** Modular, AI-augmented systems where humans and AI collaborate across the entire software lifecycle.
 
-**Card 2: Web Cartography**
-- Icon: Interactive map symbol
-- Brief description  
-- "Learn More" button → expands to show:
-  - Custom web maps (MapLibre, Leaflet)
-  - Interactive dashboards
-  - Data storytelling
-  - Responsive mapping apps
+**Core Offerings:**
+- Agentic workflow design and implementation
+- Custom GIS automation solutions
+- AI-powered data processing pipelines
+- Code generation and documentation tools
+- Enterprise-grade reliability and testing
+- Modular architecture for existing GIS infrastructure
 
-**Card 3: AI-Assisted Workflows**
-- Icon: AI/automation symbol
-- Brief description
-- "Learn More" button → expands to show:
-  - Autonomous GIS agents
-  - RAG pipelines for spatial data
-  - Technical infrastructure
-  - Docker + FastAPI solutions
+**Showcase Project:** Tilecraft - AI-assisted CLI tool for vector tile generation with natural language style prompts
 
-**Interaction:**
-- Cards expand/collapse on click
-- Smooth animations
-- Mobile-friendly accordion style
-
-### 3. About Section
-**Content:**
-- Professional headshot or workspace photo
-- Personal bio focusing on:
-  - Background in GIS/data science
-  - Mission and values
-  - Approach to work
-  - Location (if relevant)
-- Keep it personal but professional
-
-### 4. Contact Section
-**Contact Form:**
-- Name (required)
-- Email (required)
-- Project type (dropdown: Data Science, Web Mapping, AI Workflows, Other)
-- Project description (textarea)
-- Budget range (optional dropdown)
-- Submit button
-
-**Social Links:**
-- Email address
-- GitHub profile
-- Instagram
-- Any other relevant platforms
-
-**Additional Info:**
-- Response time expectation
-- Consultation process overview
+**Target Projects:** Enterprise GIS modernization, research workflow automation, startup technical infrastructure
 
 ---
 
-## Technical Specifications
+## Brand Positioning
 
-### Tech Stack
-- **HTML/CSS/JavaScript** (simple static approach)
-- **OR Next.js** if you want React components
-- **Tailwind CSS** for styling
-- **Framer Motion** for animations (if using React)
-- **Vercel** for hosting
+### Unique Value Proposition
+**"Custom solutions, not cookie-cutter approaches"** - Every project receives tailored methodology based on specific client needs and challenges.
 
-### Agent Instructions for Development
+### Core Differentiators
+- **Academic Rigor + Practical Application** - Ph.D.-level expertise applied to real-world challenges
+- **Ethical Data Practices** - Responsible use of geospatial data with transparent methodologies
+- **Human-Centered Design** - Prioritizing usability and accessibility in all deliverables
+- **AI-Enhanced, Not AI-Replaced** - Intelligent partnership that amplifies human capabilities
 
-**When building components, always:**
-- Use the exact brand colors specified
-- Follow mobile-first responsive design
-- Include smooth scroll behavior
-- Add hover/focus states for interactivity
-- Ensure accessibility (proper ARIA labels, keyboard navigation)
-- Keep animations subtle and performance-friendly
-
-**Component Structure:**
-```
-Header (fixed navigation)
-├── Hero Section
-├── Services Section
-│   ├── Service Card 1 (expandable)
-│   ├── Service Card 2 (expandable)
-│   └── Service Card 3 (expandable)
-├── About Section
-└── Contact Section
-    ├── Contact Form
-    └── Social Links
-```
-
-**Responsive Breakpoints:**
-- Mobile: < 768px (stack everything)
-- Tablet: 768px - 1024px (2-column layouts)
-- Desktop: > 1024px (full layouts)
+### Brand Personality
+- Professional yet approachable
+- Technical competence without jargon overwhelming
+- Mission-driven and environmentally conscious
+- Quality craftsmanship meets cutting-edge technology
 
 ---
 
-## Content Guidelines
+## Website Strategy
 
-### Tone of Voice
-- Professional but approachable
-- Emphasize craft and quality
-- Technical competence without jargon
-- Mission-driven and ethical
+### Primary Conversion Goals
+1. **Consultation Requests** - High-intent prospects scheduling initial project discussions
+2. **Portfolio Engagement** - Prospects exploring project case studies and technical depth
+3. **Thought Leadership** - Building authority through AI-assisted workflows case study
 
-### Key Messages
-- Artisanal quality meets modern technology
-- Custom solutions, not cookie-cutter approaches
-- Ethical data practices
-- AI-enhanced but human-centered
+### User Journey
+1. **Discovery** - Professional arrives via search, referral, or direct navigation
+2. **Evaluation** - Reviews services, approach, and recent projects
+3. **Qualification** - Assesses fit through detailed service descriptions and case studies
+4. **Conversion** - Submits consultation request with project details
+
+### Content Strategy
+- **Hero Section** - Immediate credibility with "Bespoke Cartography" positioning
+- **Services** - Detailed capability descriptions that demonstrate expertise depth
+- **About** - Personal story that builds trust and human connection
+- **Projects** - Recent work showcasing technical range and problem-solving
+- **Contact** - Clear consultation process that reduces friction
 
 ---
 
 ## Success Metrics
-- Time on site > 2 minutes
-- Services section engagement (card expansions)
-- Contact form completion rate > 15%
-- Mobile usability score > 90%
+
+### Business Metrics
+- **Qualified Consultation Requests** - Target: 2-3 per month minimum
+- **Project Pipeline Value** - Average project value $15K-50K range
+- **Client Acquisition Cost** - Measure marketing efficiency
+- **Referral Rate** - Track client satisfaction and network growth
+
+### Website Performance
+- **Time on Site** - Target: >3 minutes (indicates serious evaluation)
+- **Services Engagement** - Expansion interactions showing deep interest
+- **Contact Form Quality** - Complete submissions with project details
+- **Mobile Experience** - Seamless across all devices (60%+ mobile traffic)
+
+### Thought Leadership
+- **Case Study Downloads** - AI-assisted workflows deep-dive engagement
+- **GitHub Portfolio Views** - Technical validation through project exploration
+- **Professional Network Growth** - LinkedIn and industry connections
 
 ---
 
-## Agent Prompting Template
+## Competitive Landscape
 
-```
-Build a [section name] that:
-- Uses Small Batch Maps brand colors: terracotta (#CD5C40), sage (#7A8B7A), cream (#F5F2E8), teal (#2C5F5D)
-- Follows mobile-first responsive design
-- Includes smooth animations and hover states
-- Maintains the artisanal cartography aesthetic
-- Is accessible and keyboard navigable
-- [specific section requirements from above]
-```
+### Direct Competitors
+- Boutique GIS consultancies (typically lacking AI integration)
+- Academic researchers (often limited commercial experience)
+- Large consulting firms (less specialized, higher overhead)
+
+### Competitive Advantages
+- **Unique AI + Cartography Combination** - Rare intersection of skills
+- **Academic Credibility + Commercial Pragmatism** - Best of both worlds
+- **Boutique Attention + Enterprise Capability** - Scales with client needs
+- **Open Source Contributions** - Demonstrates thought leadership
 
 ---
 
-_Map lines trace the earth,  
-Stories woven, paths revealed—  
-Art in every chart._
+## Future Roadmap
+
+### Short Term (3-6 months)
+- Establish consistent project pipeline through website optimization
+- Develop 2-3 detailed case studies for portfolio depth
+- Build professional network through industry engagement
+
+### Medium Term (6-12 months)  
+- Expand AI-assisted workflows offerings based on market demand
+- Develop partnership channels with complementary services
+- Consider specialized industry verticals (environmental, urban planning)
+
+### Long Term (12+ months)
+- Evaluate team expansion based on project volume
+- Explore recurring revenue models (dashboards, monitoring)
+- Build proprietary tools and intellectual property
+
+---
+
+*Professional geospatial intelligence for organizations that value quality, ethics, and innovation.*
