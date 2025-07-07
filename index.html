@@ -206,7 +206,7 @@
                                             <path d="M20 6L10 12L2 6V4L10 10L20 4V6Z"/>
                                         </svg>
                                     </div>
-                                    <p>Fast APIs, spatial databases, and reproducible pipelines</p>
+                                    <p>Custom APIs, spatial databases, and reproducible pipelines</p>
                                 </div>
                                 
                                 <div class="workflow-step">
@@ -363,15 +363,7 @@
                             </div>
                         </div>
 
-                        <!-- Winding Divider -->
-                        <div class="winding-divider" aria-hidden="true">
-                            <svg viewBox="0 0 100 20" class="divider-svg">
-                                <path d="M0,10 Q25,5 50,10 T100,10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="20" cy="8" r="2" fill="currentColor"/>
-                                <circle cx="50" cy="10" r="2" fill="currentColor"/>
-                                <circle cx="80" cy="12" r="2" fill="currentColor"/>
-                            </svg>
-                        </div>
+
 
                         <!-- Project Applications -->
                         <div class="applications-showcase">
@@ -422,41 +414,92 @@
                 <div id="ai-workflows-content" class="expansion-content hidden">
                     <div class="service-details-expanded">
                         <div class="service-overview">
-                            <p class="service-intro">Leverage cutting-edge AI and automation technologies to streamline your geospatial operations. I develop intelligent systems that augment human capabilities and automate repetitive GIS tasks, making your workflows more efficient and scalable.</p>
+                            <p class="service-intro">I design and implement <strong>agentic workflows</strong>—modular, AI-augmented systems where humans and AI collaborate across the entire software lifecycle. This isn't just automation; it's intelligent partnership that amplifies capabilities while maintaining control.</p>
+                        </div>
+
+                        <!-- Case Study Highlight -->
+                        <div class="case-study-highlight">
+                            <h4 class="case-study-title">Real-World Case Study: The Tilecraft Project</h4>
+                            <p class="case-study-description">
+                                I recently built <strong>Tilecraft</strong>, a production-ready vector tile generator using agentic development principles. This wasn't theoretical—it was a rigorous study of human-AI collaboration in geospatial software development with documented results.
+                            </p>
+                            <div class="case-study-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-number">4,632</span>
+                                    <span class="metric-label">Lines of Production Code</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-number">27</span>
+                                    <span class="metric-label">Automated Tests</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-number">64%</span>
+                                    <span class="metric-label">Test Coverage</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-number">100%</span>
+                                    <span class="metric-label">Pipeline Completion</span>
+                                </div>
+                            </div>
                         </div>
                         
                         <div class="service-capabilities">
-                            <h4 class="capability-title">AI Integration Solutions</h4>
+                            <h4 class="capability-title">Agentic Architecture Patterns</h4>
                             <div class="capabilities-grid">
                                 <div class="capability-item">
-                                    <h5>Autonomous GIS Agents</h5>
-                                    <p>Intelligent agents that can perform complex GIS operations, data analysis, and decision-making with minimal human intervention, powered by large language models and spatial reasoning.</p>
+                                    <h5>Modular AI Collaboration</h5>
+                                    <p>Design systems where AI agents have defined roles in planning, implementation, testing, and documentation—with humans maintaining oversight and final authority.</p>
                                 </div>
                                 <div class="capability-item">
-                                    <h5>RAG Pipelines for Spatial Data</h5>
-                                    <p>Retrieval-Augmented Generation systems that can query, analyze, and generate insights from vast spatial datasets using natural language interfaces.</p>
+                                    <h5>Configuration as Shared Memory</h5>
+                                    <p>Use structured config files as collaborative spaces where both humans and AI can read, write, and reason about system behavior and requirements.</p>
                                 </div>
                                 <div class="capability-item">
-                                    <h5>Technical Infrastructure</h5>
-                                    <p>Robust, scalable infrastructure using modern technologies like Docker, Kubernetes, and cloud services to support AI-assisted geospatial applications.</p>
+                                    <h5>Graceful Degradation by Design</h5>
+                                    <p>Build systems that expect AI failures and include fallback paths, structured logging, and human intervention points at every critical junction.</p>
                                 </div>
                                 <div class="capability-item">
-                                    <h5>API Development</h5>
-                                    <p>Custom APIs built with FastAPI and other modern frameworks to integrate AI capabilities into existing systems and workflows.</p>
+                                    <h5>Progressive Intelligence Enhancement</h5>
+                                    <p>Implement workflows where AI provides partial solutions, scaffolding, and incremental improvements rather than expecting perfect output on first try.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="service-applications">
-                            <h4 class="applications-title">Implementation Areas</h4>
+                            <h4 class="applications-title">Technical Implementation</h4>
                             <ul class="applications-list">
-                                <li>Automated spatial data processing and quality control</li>
-                                <li>Intelligent geocoding and address matching</li>
-                                <li>AI-assisted feature extraction from imagery</li>
-                                <li>Natural language querying of spatial databases</li>
-                                <li>Automated report generation and insights</li>
-                                <li>Smart routing and optimization algorithms</li>
+                                <li><strong>Prompt Engineering & Templates:</strong> YAML-based prompt systems with version control and parameterization</li>
+                                <li><strong>Dual-Loop Architecture:</strong> Separate human and AI feedback cycles with shared state management</li>
+                                <li><strong>Agent-Aware Testing:</strong> QA systems designed to validate both code and AI behavior</li>
+                                <li><strong>Self-Scaffolding CLIs:</strong> Command-line tools that emit AI-parseable hints and recovery suggestions</li>
+                                <li><strong>Observability for AI:</strong> Structured logging and monitoring of prompt-response chains and agent decisions</li>
+                                <li><strong>Production Infrastructure:</strong> Docker, FastAPI, and cloud deployment patterns for AI-augmented applications</li>
                             </ul>
+                        </div>
+
+                        <div class="service-example">
+                            <h4 class="example-title">Example: Tilecraft</h4>
+                            <p class="example-description">
+                                <strong>Tilecraft</strong> is an AI-assisted CLI tool I built that demonstrates these principles in action. It combines OpenStreetMap data processing with AI-powered schema generation and style design. Users provide natural language descriptions like "subalpine dusk" or "urban midnight" and the system generates complete vector tile pipelines with beautiful, context-aware cartographic styles.
+                            </p>
+                            <div class="example-features">
+                                <span class="feature-tag">AI Schema Generation</span>
+                                <span class="feature-tag">Prompt-based Style Design</span>
+                                <span class="feature-tag">Human-AI Collaboration</span>
+                            </div>
+                            <a href="https://github.com/rgdonohue/tilecraft" class="example-link" target="_blank">
+                                View on GitHub <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+
+                        <div class="case-study-cta">
+                            <div class="cta-content">
+                                <h4>Want the Full Technical Deep-Dive?</h4>
+                                <p>Read the complete 5-part case study covering architecture patterns, testing strategies, technical implementation, and lessons learned from building production AI-assisted software.</p>
+                                <a href="agentic-workflows.html" class="cta-button cta-button-secondary">
+                                    Read the Case Study <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -472,19 +515,19 @@
                 
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="images/richard.jpeg" alt="Richard Donohue, founder of Small Batch Maps, professional headshot" class="about-logo-image" loading="lazy">
+                        <img src="images/richard.png" alt="Richard Donohue, founder of Small Batch Maps, professional headshot" class="about-logo-image" loading="lazy">
                     </div>
                     
                     <div class="about-content">
                         <h3 class="about-subtitle">Crafting Maps with Purpose</h3>
                         <p class="about-text">
-                            With a background in Geography, GIS, and Cartography, I specialize in transforming complex geospatial data into meaningful insights and beautiful, functional maps. My approach combines traditional cartographic principles with cutting-edge AI-augmented workflows and web technologies.
+                            With a Ph.D. in Geography, GIS, and Cartography, I specialize in transforming complex geospatial data into meaningful insights and beautiful, functional maps. My approach combines traditional cartographic principles with modern web technologies and current AI-assisted workflows.
                         </p>
                         <p class="about-text">
                             I believe in ethical data practices and human-centered design. Every project is treated as a unique challenge, deserving custom solutions rather than cookie-cutter approaches. Whether you need sophisticated spatial analysis, interactive web applications, or AI-assisted workflows, I bring both technical expertise and creative vision to your geospatial challenges.
                         </p>
                         <p class="about-text">
-                            Born and raised in Durango, CO, and now based in the US Mountain West, I work with clients globally to turn their spatial data into powerful tools for decision-making and storytelling.
+                            Born and raised in Durango, CO, I enjoy the outdoors, hiking, and skiing.
                         </p>
                     </div>
                 </div>
@@ -496,13 +539,13 @@
     <section id="projects" class="projects" aria-labelledby="projects-title">
         <div class="container">
             <h2 id="projects-title" class="section-title">Recent Projects</h2>
-            <p class="section-subtitle">Explore my applications of geospatial data science and web cartography.</p>
+            <p class="section-subtitle">Explore my applications of geospatial data science and web cartography. And please <a href="#contact">get in touch</a> if you'd like to discuss a project.</p>
             
             <div class="projects-grid" role="group" aria-labelledby="projects-title">
-                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/urban-planning-project', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/urban-planning-project')" aria-label="View Urban Planning project on GitHub">
-                    <div class="project-icon" aria-hidden="true">🏙</div>
-                    <h3 class="project-title">Urban Planning</h3>
-                    <p class="project-description">Interactive mapping tools for urban development and zoning analysis</p>
+                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/tilecraft', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/tilecraft')" aria-label="View Tilecraft project on GitHub">
+                    <div class="project-icon" aria-hidden="true">🗺️</div>
+                    <h3 class="project-title">Tilecraft</h3>
+                    <p class="project-description">AI-assisted CLI tool for generating beautiful vector tiles from OpenStreetMap data</p>
                 </article>
                 <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/environmental-monitoring', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/environmental-monitoring')" aria-label="View Environmental Monitoring project on GitHub">
                     <div class="project-icon" aria-hidden="true">🌿</div>
