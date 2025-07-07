@@ -2,15 +2,12 @@
 
 🌐 **[smallbatchmaps.com](https://smallbatchmaps.com)**
 
----
-
-## Small Batch Maps
 
 Curated, handcrafted cartography and geospatial intelligence — integrating GIS, AI, and design — by Dr. Richard Donohue.
 
 This is a working portfolio, digital workshop, and creative studio for experimental cartography and geospatial tools — mixing old-school craft with bleeding-edge code.
 
-### Offerings
+## Offerings
 
 **🗺️ Web Cartography**
 Fast, lightweight, artisanal web maps — optimized for storytelling, exploration, or analysis. Built with MapLibre, Tippecanoe, and modern JS frameworks.
@@ -24,7 +21,7 @@ Maps with a point of view. I craft original basemap styles, cartographic design 
 **🧪 R\&D and Experiments**
 Open-ended spatial experiments, tool prototyping, and weird beautiful stuff. Because the future of maps belongs to the curious — to those who chase rabbits down data trails, question the obvious, and redraw boundaries where the unknown still breathes.
 
-### Recent Projects
+## Recent Projects
 
 * **FLOWFINDER** — Research framework for testing watershed delineation accuracy across different hydrological analysis tools.
 * **Geomockery** — AI-powered tool for generating realistic mock geospatial data for testing and development purposes.
@@ -32,7 +29,7 @@ Open-ended spatial experiments, tool prototyping, and weird beautiful stuff. Bec
 * **ESDA Web Mapping** — Modern framework combining web mapping with exploratory spatial data analysis capabilities.
 * **Tilecraft** — AI-assisted CLI tool that generates vector tile pipelines and cartographic styles from natural language descriptions.
 
-### Current Focus Areas
+## Current Focus Areas
 
 * Agentic workflows for complex spatial analysis automation
 * Climate impact visualization for mountain and coastal systems
@@ -42,7 +39,7 @@ Open-ended spatial experiments, tool prototyping, and weird beautiful stuff. Bec
 
 ---
 
-### About Me
+## About Me
 
 I'm a geospatial AI consultant, recovering academic, and longtime map nerd based in the U.S. Mountain West. I blend cartographic craft with open-source tech, Buddhist insight, and a commitment to spatial justice.
 
