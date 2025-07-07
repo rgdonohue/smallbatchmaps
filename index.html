@@ -94,8 +94,10 @@
                 <!-- Service Card 1 -->
                 <article class="service-card" data-title="Geospatial Data Science">
                     <div class="service-icon" aria-hidden="true">
-                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="Data analytics icon">
-                            <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2.5 2.5h-15v-15h15v15zm0-16.5h-15c-.83 0-1.5.67-1.5 1.5v15c0 .83.67 1.5 1.5 1.5h15c.83 0 1.5-.67 1.5-1.5v-15c0-.83-.67-1.5-1.5-1.5z"/>
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" x2="12" y1="20" y2="10"/>
+                            <line x1="18" x2="18" y1="20" y2="4"/>
+                            <line x1="6" x2="6" y1="20" y2="16"/>
                         </svg>
                     </div>
                     <h3 class="service-title">Geospatial Data Science</h3>
@@ -112,8 +114,10 @@
                 <!-- Service Card 2 -->
                 <article class="service-card" data-title="Web Cartography">
                     <div class="service-icon" aria-hidden="true">
-                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="Interactive map icon">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
                         </svg>
                     </div>
                     <h3 class="service-title">Web Cartography</h3>
@@ -129,10 +133,14 @@
                 <!-- Service Card 3 -->
                 <article class="service-card service-card-wide" data-title="AI-Assisted Workflows">
                     <div class="service-icon" aria-hidden="true">
-                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" role="img" aria-label="AI automation icon">
-                            <path d="M20,15.5C18.25,15.5 16.6,16.3 15.4,17.5C14.2,16.3 12.55,15.5 10.8,15.5C7.93,15.5 5.61,17.81 5.61,20.69C5.61,21.08 5.98,21.45 6.37,21.45H19.63C20.02,21.45 20.39,21.08 20.39,20.69C20.39,17.81 18.07,15.5 15.2,15.5H20Z"/>
-                            <path d="M12,2C13.1,2 14,2.9 14,4C14,5.1 13.1,6 12,6C10.9,6 10,5.1 10,4C10,2.9 10.9,2 12,2Z"/>
-                            <path d="M21,9V7L15,13L13.5,7.5C13.1,6.8 12.4,6.3 11.7,6.3C11,6.3 10.3,6.8 9.9,7.5L9,10L7,8V10C7,10.6 7.4,11 8,11C8.6,11 9,10.6 9,10V9.5L10.5,11L12,6.5L13.5,12L18.5,7H21Z"/>
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3c0 1.5 2 4 3 4s3-2.5 3-4a3 3 0 0 0-3-3Z"/>
+                            <path d="m6 6 1.5 1.5"/>
+                            <path d="m16.5 7.5L18 6"/>
+                            <path d="m10 13H7l-2 2v3c0 .5.5 1 1 1h3"/>
+                            <path d="m14 13h3l2 2v3c0 .5-.5 1-1 1h-3"/>
+                            <path d="m6 6-2 2v11c0 .5.5 1 1 1h2"/>
+                            <path d="m18 6 2 2v11c0 .5-.5 1-1 1h-2"/>
                         </svg>
                     </div>
                     <h3 class="service-title">AI-Assisted Workflows</h3>
@@ -412,93 +420,141 @@
                 
                 <!-- AI-Assisted Workflows Content -->
                 <div id="ai-workflows-content" class="expansion-content hidden">
-                    <div class="service-details-expanded">
-                        <div class="service-overview">
-                            <p class="service-intro">I design and implement <strong>agentic workflows</strong>—modular, AI-augmented systems where humans and AI collaborate across the entire software lifecycle. This isn't just automation; it's intelligent partnership that amplifies capabilities while maintaining control.</p>
+                    <div class="ai-workflows-expansion">
+                        <!-- Section Intro -->
+                        <div class="ai-header">
+                            <p class="ai-intro">I design and implement <strong>agentic workflows</strong>—modular, AI-augmented systems where humans and AI collaborate across the entire software lifecycle. This isn't just automation; it's intelligent partnership that amplifies capabilities while maintaining control. Whether automating repetitive GIS tasks, generating code, or creating dynamic map styles, I help you build systems that do more with less effort while keeping you in charge of the important decisions.</p>
                         </div>
 
-                        <!-- Case Study Highlight -->
-                        <div class="case-study-highlight">
-                            <h4 class="case-study-title">Real-World Case Study: The Tilecraft Project</h4>
-                            <p class="case-study-description">
-                                I recently built <strong>Tilecraft</strong>, a production-ready vector tile generator using agentic development principles. This wasn't theoretical—it was a rigorous study of human-AI collaboration in geospatial software development with documented results.
-                            </p>
-                            <div class="case-study-metrics">
-                                <div class="metric-item">
-                                    <span class="metric-number">4,632</span>
-                                    <span class="metric-label">Lines of Production Code</span>
+                        <!-- Simple Benefits Grid -->
+                        <div class="benefits-showcase">
+                            <h4 class="benefits-title">Key Benefits</h4>
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="m16 6 4 14-4-2-4 2z"/>
+                                            <path d="M12 6V2H8"/>
+                                            <path d="m8 18-4 4V10l4-4"/>
+                                        </svg>
+                                    </div>
+                                    <h5>Reduced GIS Processing Time</h5>
+                                    <p>Automate data pipeline tasks like schema validation and styling, cutting processing time by 60-80%</p>
                                 </div>
-                                <div class="metric-item">
-                                    <span class="metric-number">27</span>
-                                    <span class="metric-label">Automated Tests</span>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <circle cx="12" cy="12" r="6"/>
+                                            <circle cx="12" cy="12" r="2"/>
+                                        </svg>
+                                    </div>
+                                    <h5>Domain Expert + AI Efficiency</h5>
+                                    <p>Combine deep cartographic knowledge with AI acceleration for superior geospatial solutions</p>
                                 </div>
-                                <div class="metric-item">
-                                    <span class="metric-number">64%</span>
-                                    <span class="metric-label">Test Coverage</span>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                                            <path d="m9 12 2 2 4-4"/>
+                                        </svg>
+                                    </div>
+                                    <h5>Enterprise-Grade Reliability</h5>
+                                    <p>Robust error handling, comprehensive testing, and detailed documentation for production systems</p>
                                 </div>
-                                <div class="metric-item">
-                                    <span class="metric-number">100%</span>
-                                    <span class="metric-label">Pipeline Completion</span>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/>
+                                            <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>
+                                            <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+                                        </svg>
+                                    </div>
+                                    <h5>Modular Architecture</h5>
+                                    <p>Composable components that integrate seamlessly with existing GIS infrastructure and workflows</p>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="service-capabilities">
-                            <h4 class="capability-title">Agentic Architecture Patterns</h4>
-                            <div class="capabilities-grid">
-                                <div class="capability-item">
-                                    <h5>Modular AI Collaboration</h5>
-                                    <p>Design systems where AI agents have defined roles in planning, implementation, testing, and documentation—with humans maintaining oversight and final authority.</p>
-                                </div>
-                                <div class="capability-item">
-                                    <h5>Configuration as Shared Memory</h5>
-                                    <p>Use structured config files as collaborative spaces where both humans and AI can read, write, and reason about system behavior and requirements.</p>
-                                </div>
-                                <div class="capability-item">
-                                    <h5>Graceful Degradation by Design</h5>
-                                    <p>Build systems that expect AI failures and include fallback paths, structured logging, and human intervention points at every critical junction.</p>
-                                </div>
-                                <div class="capability-item">
-                                    <h5>Progressive Intelligence Enhancement</h5>
-                                    <p>Implement workflows where AI provides partial solutions, scaffolding, and incremental improvements rather than expecting perfect output on first try.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="service-applications">
-                            <h4 class="applications-title">Technical Implementation</h4>
-                            <ul class="applications-list">
-                                <li><strong>Prompt Engineering & Templates:</strong> YAML-based prompt systems with version control and parameterization</li>
-                                <li><strong>Dual-Loop Architecture:</strong> Separate human and AI feedback cycles with shared state management</li>
-                                <li><strong>Agent-Aware Testing:</strong> QA systems designed to validate both code and AI behavior</li>
-                                <li><strong>Self-Scaffolding CLIs:</strong> Command-line tools that emit AI-parseable hints and recovery suggestions</li>
-                                <li><strong>Observability for AI:</strong> Structured logging and monitoring of prompt-response chains and agent decisions</li>
-                                <li><strong>Production Infrastructure:</strong> Docker, FastAPI, and cloud deployment patterns for AI-augmented applications</li>
-                            </ul>
-                        </div>
 
+                        <!-- Case Study Section -->
                         <div class="service-example">
-                            <h4 class="example-title">Example: Tilecraft</h4>
-                            <p class="example-description">
-                                <strong>Tilecraft</strong> is an AI-assisted CLI tool I built that demonstrates these principles in action. It combines OpenStreetMap data processing with AI-powered schema generation and style design. Users provide natural language descriptions like "subalpine dusk" or "urban midnight" and the system generates complete vector tile pipelines with beautiful, context-aware cartographic styles.
-                            </p>
-                            <div class="example-features">
-                                <span class="feature-tag">AI Schema Generation</span>
-                                <span class="feature-tag">Prompt-based Style Design</span>
-                                <span class="feature-tag">Human-AI Collaboration</span>
+                            <div class="case-study-content">
+                                <div class="case-study-visual">
+                                    <img src="images/tilecraft-small.png" alt="TileCraft application interface showing AI-assisted vector tile generation" class="case-study-image" loading="lazy">
+                                </div>
+                                <div class="case-study-text">
+                                    <h4 class="example-title">A Case Study in Human-AI Collaboration: Tilecraft</h4>
+                                    <p class="example-description">
+                                        <strong>Tilecraft</strong> is an AI-assisted CLI tool I built that demonstrates these principles in action. It combines OpenStreetMap data processing with <strong>AI-powered schema generation</strong> and  <strong>prompt-based style design</strong>. Users provide natural language descriptions like "subalpine dusk" or "urban midnight" and the system generates complete vector tile pipelines with beautiful, context-aware cartographic styles.
+                                    </p>
+                                    <a href="https://github.com/rgdonohue/tilecraft" class="example-link" target="_blank">
+                                        View on GitHub <span aria-hidden="true">→</span>
+                                    </a>
+                                </div>
                             </div>
-                            <a href="https://github.com/rgdonohue/tilecraft" class="example-link" target="_blank">
-                                View on GitHub <span aria-hidden="true">→</span>
-                            </a>
                         </div>
 
-                        <div class="case-study-cta">
-                            <div class="cta-content">
-                                <h4>Want the Full Technical Deep-Dive?</h4>
-                                <p>Read the complete 5-part case study covering architecture patterns, testing strategies, technical implementation, and lessons learned from building production AI-assisted software.</p>
-                                <a href="agentic-workflows.html" class="cta-button cta-button-secondary">
-                                    Read the Case Study <span aria-hidden="true">→</span>
-                                </a>
+
+
+                        <!-- Featured Case Study -->
+                        <div class="featured-case-study">
+                            <div class="featured-content">
+                                <div class="featured-text">
+                                    <div class="featured-label">Featured Deep-Dive</div>
+                                    <h4 class="featured-title">Building Production AI-Assisted Software</h4>
+                                    <p class="featured-description">
+                                        A comprehensive 5-part technical case study covering architecture patterns, testing strategies, and lessons learned from building Tilecraft—from prototype to production.
+                                    </p>
+                                    <div class="featured-highlights">
+                                        <span class="highlight-item">
+                                            <svg style="width: 1em; height: 1em; display: inline-block; vertical-align: middle; margin-right: 0.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M2 20h20"/>
+                                                <path d="M4 20V10"/>
+                                                <path d="M12 20V4"/>
+                                                <path d="M20 20v-6"/>
+                                            </svg>
+                                            Architecture Patterns
+                                        </span>
+                                        <span class="highlight-item">
+                                            <svg style="width: 1em; height: 1em; display: inline-block; vertical-align: middle; margin-right: 0.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M15 2c-1.35 1.5-2.092 3-2.5 4.5L14 8"/>
+                                                <path d="m17 6-2.891-2.891"/>
+                                                <path d="M2 15c6.667-6 13.333 0 20-6"/>
+                                                <path d="m9 22 3-8 3 8"/>
+                                                <path d="M15 6.5 17.5 9 15 11.5"/>
+                                            </svg>
+                                            Testing Strategies
+                                        </span>
+                                        <span class="highlight-item">
+                                            <svg style="width: 1em; height: 1em; display: inline-block; vertical-align: middle; margin-right: 0.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <line x1="12" x2="12" y1="20" y2="10"/>
+                                                <line x1="18" x2="18" y1="20" y2="4"/>
+                                                <line x1="6" x2="6" y1="20" y2="16"/>
+                                            </svg>
+                                            Performance Analysis
+                                        </span>
+                                    </div>
+                                    <a href="agentic-workflows.html" class="featured-cta">
+                                        Read the Complete Case Study <span aria-hidden="true">→</span>
+                                    </a>
+                                </div>
+                                <div class="featured-visual">
+                                    <div class="code-preview">
+                                        <div class="code-header">
+                                            <span class="code-dot red"></span>
+                                            <span class="code-dot yellow"></span>
+                                            <span class="code-dot green"></span>
+                                        </div>
+                                        <div class="code-content">
+                                            <code>
+                                                <span class="code-comment"># AI-assisted schema generation</span><br>
+                                                <span class="code-keyword">def</span> <span class="code-function">generate_schema</span>(<span class="code-param">prompt</span>):<br>
+                                                &nbsp;&nbsp;<span class="code-string">"subalpine dusk"</span> <span class="code-operator">→</span><br>
+                                                &nbsp;&nbsp;<span class="code-output">complete vector pipeline</span>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -542,30 +598,68 @@
             <p class="section-subtitle">Explore my applications of geospatial data science and web cartography. And please <a href="#contact">get in touch</a> if you'd like to discuss a project.</p>
             
             <div class="projects-grid" role="group" aria-labelledby="projects-title">
+                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/flowfinder', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/flowfinder')" aria-label="View FlowFinder project on GitHub">
+                    <div class="project-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.19 3 12.25c0 2.22 1.8 4.05 4 4.05Z"/>
+                            <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2.26 4.89 4.56 6.01a10.97 10.97 0 0 0 .01 3.57c-2.33 1.12-4.06 3.51-4.57 6.01-.5-2.5-2.24-4.89-4.56-6.01Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">FlowFinder</h3>
+                    <p class="project-description">Research framework for watershed delineation accuracy and systematic comparison of hydrological analysis tools</p>
+                </article>
+                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/geomockery', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/geomockery')" aria-label="View Geomockery project on GitHub">
+                    <div class="project-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                            <path d="M4 7c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V7Z"/>
+                            <path d="m14 11-3 3"/>
+                            <path d="m9 11 3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Geomockery</h3>
+                    <p class="project-description">AI-powered geospatial data generator for creating realistic mock location data for testing and development</p>
+                </article>
+                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/ghost-forest-watcher', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/ghost-forest-watcher')" aria-label="View Ghost Forest Watcher project on GitHub">
+                    <div class="project-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 8 14 8 14s8-8.6 8-14c0-4.4-3.6-8-8-8Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Ghost Forest Watcher</h3>
+                    <p class="project-description">AI-powered forest recovery monitoring using satellite imagery and computer vision after wildfire events</p>
+                </article>
+                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/esda-web-mapping-boilerplate', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/esda-web-mapping-boilerplate')" aria-label="View ESDA Web Mapping Boilerplate project on GitHub">
+                    <div class="project-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" x2="12" y1="20" y2="10"/>
+                            <line x1="18" x2="18" y1="20" y2="4"/>
+                            <line x1="6" x2="6" y1="20" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">ESDA Web Mapping</h3>
+                    <p class="project-description">Modern web framework for exploratory spatial data analysis with advanced mapping and statistical capabilities</p>
+                </article>
+                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/dem-hillshade-generator', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/dem-hillshade-generator')" aria-label="View DEM Hillshade Generator project on GitHub">
+                    <div class="project-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">DEM Hillshade Generator</h3>
+                    <p class="project-description">Python tool for processing Digital Elevation Models to create beautiful colored hillshade terrain visualizations</p>
+                </article>
                 <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/tilecraft', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/tilecraft')" aria-label="View Tilecraft project on GitHub">
-                    <div class="project-icon" aria-hidden="true">🗺️</div>
+                    <div class="project-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/>
+                            <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>
+                            <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+                        </svg>
+                    </div>
                     <h3 class="project-title">Tilecraft</h3>
                     <p class="project-description">AI-assisted CLI tool for generating beautiful vector tiles from OpenStreetMap data</p>
-                </article>
-                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/environmental-monitoring', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/environmental-monitoring')" aria-label="View Environmental Monitoring project on GitHub">
-                    <div class="project-icon" aria-hidden="true">🌿</div>
-                    <h3 class="project-title">Environmental Monitoring</h3>
-                    <p class="project-description">Real-time environmental data visualization and trend analysis</p>
-                </article>
-                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/public-health-mapping', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/public-health-mapping')" aria-label="View Behavioral/Public Health project on GitHub">
-                    <div class="project-icon" aria-hidden="true">🧠</div>
-                    <h3 class="project-title">Behavioral/Public Health</h3>
-                    <p class="project-description">Spatial analysis of health outcomes and behavioral patterns</p>
-                </article>
-                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/transportation-logistics', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/transportation-logistics')" aria-label="View Transportation Logistics project on GitHub">
-                    <div class="project-icon" aria-hidden="true">🚛</div>
-                    <h3 class="project-title">Transportation Logistics</h3>
-                    <p class="project-description">Route optimization and logistics network analysis</p>
-                </article>
-                <article class="project-item" role="button" tabindex="0" onclick="window.open('https://github.com/rgdonohue/natural-resources', '_blank')" onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/natural-resources')" aria-label="View Natural Resource Management project on GitHub">
-                    <div class="project-icon" aria-hidden="true">🌎</div>
-                    <h3 class="project-title">Natural Resource Management</h3>
-                    <p class="project-description">Sustainable resource allocation and conservation mapping</p>
                 </article>
             </div>
         </div>
