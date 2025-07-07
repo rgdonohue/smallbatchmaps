@@ -4,56 +4,49 @@
 
 ---
 
-**Dr. Richard Donohue's geospatial consultancy**
+## Small Batch Maps
 
-I specialize in transforming complex geospatial data into meaningful insights and functional web applications. My work combines traditional cartographic principles with modern web technologies and AI-assisted workflows to solve real-world spatial problems.
+Curated, handcrafted cartography and geospatial intelligence — integrating GIS, AI, and design — by Dr. Richard Donohue.
 
-## What I Do
+This is a working portfolio, digital workshop, and creative studio for experimental cartography and geospatial tools — mixing old-school craft with bleeding-edge code.
 
-### Geospatial Data Science
-I work with messy, inconsistent geospatial datasets to extract clear insights for decision-making. Using Python, geopandas, and Jupyter notebooks, I build reproducible workflows for spatial analysis, from basic data cleaning to complex predictive modeling. My focus is on exploratory spatial data analysis (ESDA), time-series modeling, and building scalable data pipelines.
+### Offerings
 
-### Web Cartography  
-I create interactive web maps and dashboards using modern libraries like MapLibre GL JS, Leaflet, and Mapbox. The emphasis is on performance, usability, and clear visual communication. My background in UX design helps ensure the maps work well for their intended users across all devices.
+**🗺️ Web Cartography**
+Fast, lightweight, artisanal web maps — optimized for storytelling, exploration, or analysis. Built with MapLibre, Tippecanoe, and modern JS frameworks.
 
-### AI-Assisted Workflows
-I design systems where AI augments human capabilities in geospatial workflows. This includes automated data processing, code generation, and prompt-based cartographic styling. My approach focuses on practical applications that reduce repetitive tasks while maintaining human oversight for important decisions.
+**🧠 Spatial Data Science**
+Smarter maps begin with smart data. I integrate advanced spatial analysis, open data pipelines, and exploratory spatial data analysis (ESDA) using Python, PostGIS, and AI tooling.
 
-## Background
+**🎨 Map Styling & Design Systems**
+Maps with a point of view. I craft original basemap styles, cartographic design systems, and intuitive legends — guided by clarity, aesthetics, and ethics.
 
-Born and raised in Durango, Colorado, I earned my Ph.D. in Geography, GIS, and Cartography with research focused on high-elevation ecosystem changes. I approach each project as a unique problem requiring custom solutions rather than templated approaches.
+**🧪 R\&D and Experiments**
+Open-ended spatial experiments, tool prototyping, and weird beautiful stuff. Because the future of maps belongs to the curious — to those who chase rabbits down data trails, question the obvious, and redraw boundaries where the unknown still breathes.
 
-I believe in ethical data practices, reproducible research, and making advanced geospatial capabilities accessible to organizations that need them most.
+### Recent Projects
 
-## Recent Projects
+* **FLOWFINDER** — Research framework for testing watershed delineation accuracy across different hydrological analysis tools.
+* **Geomockery** — AI-powered tool for generating realistic mock geospatial data for testing and development purposes.
+* **Ghost Forest Watcher** — Satellite imagery analysis system using computer vision to monitor forest recovery after wildfire events.
+* **ESDA Web Mapping** — Modern framework combining web mapping with exploratory spatial data analysis capabilities.
+* **Tilecraft** — AI-assisted CLI tool that generates vector tile pipelines and cartographic styles from natural language descriptions.
 
-**[FlowFinder](https://github.com/rgdonohue/flowfinder)** - Research framework for testing watershed delineation accuracy across different hydrological analysis tools.
+### Current Focus Areas
 
-**[Geomockery](https://github.com/rgdonohue/geomockery)** - AI-powered tool for generating realistic mock geospatial data for testing and development purposes.
+* Agentic workflows for complex spatial analysis automation
+* Climate impact visualization for mountain and coastal systems
+* Natural language interfaces for cartographic design
+* Open source tools for democratizing advanced GIS capabilities
+* Ethical AI applications in environmental mapping
 
-**[Ghost Forest Watcher](https://github.com/rgdonohue/ghost-forest-watcher)** - Satellite imagery analysis system using computer vision to monitor forest recovery after wildfire events.
+---
 
-**[ESDA Web Mapping](https://github.com/rgdonohue/esda-web-mapping-boilerplate)** - Modern framework combining web mapping with exploratory spatial data analysis capabilities.
+### About Me
 
-**[Tilecraft](https://github.com/rgdonohue/tilecraft)** - AI-assisted CLI tool that generates vector tile pipelines and cartographic styles from natural language descriptions.
+I'm a geospatial AI consultant, recovering academic, and longtime map nerd based in the U.S. Mountain West. I blend cartographic craft with open-source tech, Buddhist insight, and a commitment to spatial justice.
 
-## Current Focus Areas
-
-- Agentic workflows for complex spatial analysis automation
-- Climate impact visualization for mountain and coastal systems
-- Natural language interfaces for cartographic design
-- Open source tools for democratizing advanced GIS capabilities
-- Ethical AI applications in environmental mapping
-
-## Approach
-
-**Custom Solutions** - Every project gets tailored methodology based on specific requirements and constraints.
-
-**Human-Centered Design** - Maps and applications are designed for actual users with real-world constraints.
-
-**Technical Rigor** - Academic background ensures methodologically sound approaches to spatial analysis.
-
-**Practical Implementation** - Focus on solutions that work reliably in production environments.
+Let’s make better maps. Together.
 
 ---
 
