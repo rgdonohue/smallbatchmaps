@@ -1,197 +1,73 @@
-# Small Batch Maps Website
+# Small Batch Maps
 
-A beautiful, responsive single-page website for Small Batch Maps - a geospatial consultancy specializing in bespoke cartography and AI-powered GIS solutions.
-
-## 🌍 Features
-
-- **Responsive Design**: Mobile-first approach with beautiful layouts across all devices
-- **Modern UI**: Clean, professional design with custom brand colors and typography
-- **Interactive Elements**: Expandable service cards, smooth scrolling navigation, animated elements
-- **Contact Form**: Professional contact form with validation and user feedback
-- **Performance Optimized**: Fast loading with optimized assets and animations
-- **Accessibility**: Keyboard navigation and screen reader friendly
-
-## 🎨 Design System
-
-### Brand Colors
-- **Terracotta Orange**: `#CD5C40` (CTAs, accents)
-- **Sage Green**: `#7A8B7A` (secondary elements)
-- **Cream**: `#F5F2E8` (backgrounds)
-- **Deep Teal**: `#2C5F5D` (text, headers)
-- **Warm White**: `#FEFCF8` (cards, highlights)
-
-### Typography
-- **Headers**: Playfair Display (serif, elegant)
-- **Body**: Inter (clean, readable)
-- **Accent**: JetBrains Mono (technical elements)
-
-## 🏗️ Tech Stack
-
-- **HTML5**: Semantic markup
-- **CSS3**: Custom styles with Tailwind CSS
-- **JavaScript**: Vanilla JS for interactions
-- **Tailwind CSS**: Utility-first CSS framework
-- **Google Fonts**: Typography
-- **SVG Icons**: Scalable vector graphics
-
-## 📁 Project Structure
-
-```
-sbm/
-├── index.html          # Main HTML file
-├── styles.css          # Custom CSS styles
-├── script.js           # JavaScript functionality
-├── prd.md             # Product Requirements Document
-└── README.md          # This file
-```
-
-## 🔧 Setup & Development
-
-1. **Clone or download** the project files
-2. **Open** `index.html` in a web browser, or
-3. **Serve locally** using a simple HTTP server:
-
-```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js (if you have http-server installed)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
-```
-
-4. **Visit** `http://localhost:8000` in your browser
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Push code to GitHub repository
-2. Connect repository to Vercel
-3. Deploy automatically
-
-### Netlify
-1. Drag and drop project folder to Netlify
-2. Or connect GitHub repository
-3. Deploy with automatic builds
-
-### GitHub Pages
-1. Push to GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Set source to main branch
-
-## 📱 Sections
-
-### 1. Hero Section
-- Eye-catching headline with animated topographic background
-- Clear value proposition
-- Call-to-action button
-
-### 2. Services Section
-- Three expandable service cards:
-  - Geospatial Data Science
-  - Web Cartography
-  - AI-Assisted Workflows
-- Interactive "Learn More" functionality
-
-### 3. About Section
-- Personal bio and mission
-- Professional background
-- Approach and values
-
-### 4. Contact Section
-- Professional contact form with validation
-- Social media links
-- Consultation process overview
-- Response time expectations
-
-## ⚡ Performance Features
-
-- **Smooth Scrolling**: Native CSS smooth scroll behavior
-- **Optimized Animations**: GPU-accelerated CSS animations
-- **Responsive Images**: Scalable SVG icons
-- **Efficient Loading**: Minimal external dependencies
-- **Progressive Enhancement**: Works without JavaScript
-
-## 🎯 Conversion Optimization
-
-- Clear call-to-action buttons
-- Professional contact form
-- Trust indicators (consultation process)
-- Mobile-optimized experience
-- Fast loading times
-
-## 📊 Analytics Ready
-
-The website is ready for analytics integration. Add your preferred analytics service:
-
-- Google Analytics
-- Plausible
-- Fathom Analytics
-- Or any other service
-
-## 🔍 SEO Optimized
-
-- Semantic HTML structure
-- Meta descriptions and titles
-- Clean URL structure
-- Mobile-friendly design
-- Fast loading speeds
-
-## 🎨 Customization
-
-### Colors
-Update the Tailwind config in `index.html` to change brand colors:
-
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                'terracotta': '#CD5C40',
-                'sage': '#7A8B7A',
-                // ... add your colors
-            }
-        }
-    }
-}
-```
-
-### Content
-Edit the HTML content directly in `index.html` to update:
-- Service descriptions
-- About section text
-- Contact information
-- Social media links
-
-### Styling
-Modify `styles.css` to adjust:
-- Animations
-- Hover effects
-- Custom components
-- Responsive breakpoints
-
-## 📞 Contact Form Integration
-
-The contact form currently shows a success message. To integrate with a backend:
-
-1. **Netlify Forms**: Add `netlify` attribute to form
-2. **Formspree**: Update form action to Formspree endpoint
-3. **Custom Backend**: Update the form submission handler in `script.js`
-
-## 🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📄 License
-
-This project is created for Small Batch Maps. All rights reserved.
+🌐 **[smallbatchmaps.com](https://smallbatchmaps.com)**
 
 ---
 
-**Built with care for the geospatial community** 🗺️ 
+**Dr. Richard Donohue's corner of the geospatial universe** 🗺️
+
+Welcome! I'm Richard, and I spend my days turning messy geographic data into something beautiful and useful. Think of me as a cartographic translator—I help spatial data tell its story, whether that's through elegant web maps, statistical deep-dives, or AI-powered workflows that make the impossible feel routine.
+
+## 🔬 What I Actually Do
+
+### Geospatial Data Science
+You know those sprawling datasets full of null values, inconsistent projections, and mysterious column names? I love those. Armed with Python, geopandas, and an unhealthy amount of coffee, I wrangle them into submission and coax out the patterns hiding inside. Whether it's tracking urban sprawl, predicting wildfire risk, or figuring out why your delivery routes are inefficient, I build reproducible workflows that reveal what your data is really trying to tell you.
+
+*Current obsession: Time-series analysis of climate impacts on mountain ecosystems*
+
+### Web Cartography
+I create maps for the web that actually work—fast, responsive, and intuitive enough that people want to explore them. Using modern libraries like MapLibre GL JS and Leaflet, I build everything from simple story maps to complex dashboards that integrate real-time data feeds. My background in UX design means I care as much about how your map *feels* as how it looks.
+
+*Latest project: An interactive dashboard tracking ghost forests along the Pacific Coast*
+
+### AI-Assisted Workflows  
+This is where things get interesting. I design systems where humans and AI collaborate across the entire mapping pipeline—from data processing to style generation. My flagship project, **Tilecraft**, lets you describe a map style in natural language ("subalpine dusk" or "urban midnight") and generates complete vector tile pipelines with matching cartographic styles. It's like having a very talented intern who never gets tired and loves repetitive tasks.
+
+*Currently experimenting with: AI agents that can debug their own spatial SQL queries*
+
+## 🏔️ The Mountain Connection
+
+Born and raised in Durango, Colorado, I do my best thinking on hiking trails and ski slopes. There's something about mountain landscapes that clarifies complex problems—maybe it's the thin air, or maybe it's just good perspective. My Ph.D. research focused on high-elevation ecosystem changes, and I still find myself drawn to projects that help us understand how our landscapes are shifting.
+
+## 🛠️ Recent Builds
+
+**[FlowFinder](https://github.com/rgdonohue/flowfinder)** → *Watershed delineation accuracy testing framework*  
+Because sometimes you need to know if your hydrology algorithms are actually finding the right streams.
+
+**[Geomockery](https://github.com/rgdonohue/geomockery)** → *AI-powered geospatial data generator*  
+Creates realistic mock location data for testing. No more using "123 Main St" in your demos.
+
+**[Ghost Forest Watcher](https://github.com/rgdonohue/ghost-forest-watcher)** → *AI forest recovery monitoring*  
+Satellite imagery + computer vision to track forest health after wildfires. Still in active development.
+
+**[ESDA Web Mapping](https://github.com/rgdonohue/esda-web-mapping-boilerplate)** → *Modern spatial analysis framework*  
+What happens when you combine modern web mapping with statistical rigor.
+
+**[Tilecraft](https://github.com/rgdonohue/tilecraft)** → *AI-assisted cartographic styling*  
+The project that convinced me AI and cartography make excellent dance partners.
+
+## 🤖 The AI Philosophy
+
+I'm not building AI to replace cartographers—I'm building it to make us better at what we do. Think of it as having a really good research assistant who can generate code, process data, and even suggest map styles, but still needs human judgment for the important decisions. The goal is to spend less time on tedious data wrangling and more time on the creative, analytical work that actually matters.
+
+## 🎯 Current Interests
+
+- **Agentic workflows** that can handle complex, multi-step spatial analysis
+- **Climate impact visualization** with a focus on mountain and coastal systems  
+- **Prompt-based cartography** where natural language drives visual design
+- **Ethical AI applications** in environmental and social mapping
+- **Open source tools** that democratize advanced geospatial capabilities
+
+## 📚 Academic Roots
+
+Ph.D. in Geography, GIS, and Cartography, with research spanning landscape ecology, spatial statistics, and human-environment interactions. I believe in rigorous methodology, reproducible research, and making complex spatial analysis accessible to people who need it most—whether that's a conservation organization, an urban planner, or a startup trying to understand their spatial data.
+
+## 🎨 The Craft
+
+Every map tells a story, and every dataset has patterns waiting to be discovered. I approach each project as a unique challenge that deserves custom solutions, not cookie-cutter templates. Whether you need sophisticated statistical analysis, beautiful interactive visualizations, or AI systems that can scale your spatial workflows, I bring both technical depth and creative vision to the table.
+
+Plus, I actually enjoy debugging spatial queries at 2 AM. (Don't tell my therapist.)
+
+---
+
+*Building better maps, one dataset at a time.* 🗺️✨ 
