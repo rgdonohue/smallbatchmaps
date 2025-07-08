@@ -1533,7 +1533,7 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
 
 @media (min-width: 768px) {
     .contact-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
 }
 
@@ -4168,5 +4168,469 @@ a:focus {
     
     .tooltip::after {
         border-width: 5px;
+    }
+}
+
+/* =============================================================================
+   Career Experience Section
+   ============================================================================= */
+
+.experience {
+    padding: var(--section-padding);
+    background: var(--warm-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(205, 92, 64, 0.02) 0%, rgba(122, 139, 122, 0.02) 100%);
+    pointer-events: none;
+}
+
+.experience-content {
+    position: relative;
+    z-index: 1;
+}
+
+.experience-intro {
+    /* text-align: center; */
+    margin-bottom: 3rem;
+}
+
+.experience-overview {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--teal);
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Experience Header */
+.experience-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.experience-role {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--terracotta);
+    font-family: var(--font-playfair);
+    margin-bottom: 1.5rem;
+}
+
+/* Experience Details */
+.experience-details {
+    margin-top: 3rem;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.experience-section {
+    background: var(--cream);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(122, 139, 122, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.experience-section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(122, 139, 122, 0.2);
+}
+
+.experience-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-playfair);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.experience-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--terracotta);
+    border-radius: 1px;
+}
+
+/* Narrative Styles */
+.teaching-narrative,
+.thesis-narrative {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(122, 139, 122, 0.1);
+}
+
+.teaching-narrative p,
+.thesis-narrative p {
+    font-style: italic;
+    color: var(--sage);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Course Overview Styles */
+.courses-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.course-progression {
+    background: var(--warm-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(122, 139, 122, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.course-progression:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(122, 139, 122, 0.2);
+    transform: translateX(2px);
+}
+
+.course-progression h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-playfair);
+}
+
+.course-progression p {
+    color: var(--teal);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.course-progression strong {
+    color: var(--teal);
+    font-weight: 600;
+}
+
+/* Thesis Projects */
+.thesis-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.thesis-category {
+    background: var(--warm-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(122, 139, 122, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.thesis-category:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(122, 139, 122, 0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.thesis-category h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--terracotta);
+    margin-bottom: 1rem;
+    font-family: var(--font-playfair);
+    border-bottom: 1px solid rgba(122, 139, 122, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.thesis-item {
+    color: var(--teal);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(205, 92, 64, 0.3);
+}
+
+.thesis-item:last-child {
+    margin-bottom: 0;
+}
+
+.thesis-item strong {
+    color: var(--teal);
+    font-weight: 600;
+}
+
+.thesis-item a {
+    color: var(--terracotta);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.thesis-item a:hover {
+    color: rgba(205, 92, 64, 0.8);
+    text-decoration: underline;
+}
+
+/* Teaching Philosophy */
+.experience-philosophy {
+    grid-column: 1 / -1;
+}
+
+.philosophy-content {
+    text-align: left;
+}
+
+.philosophy-content > p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--teal);
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-principles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .philosophy-principles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.principle {
+    text-align: center;
+}
+
+.principle h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-playfair);
+}
+
+.principle p {
+    color: var(--teal);
+    line-height: 1.6;
+    opacity: 0.9;
+    margin: 0;
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .experience {
+        padding: 3rem 0;
+    }
+    
+    .experience-overview {
+        font-size: 1rem;
+    }
+    
+    .experience-role {
+        font-size: 1.25rem;
+    }
+    
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .experience-section {
+        padding: 1.5rem;
+    }
+    
+    .experience-section-title {
+        font-size: 1.25rem;
+    }
+    
+    .tech-tags {
+        justify-content: center;
+    }
+    
+    .philosophy-principles {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .principle {
+        text-align: left;
+    }
+    
+    .course-progression,
+    .thesis-category {
+        padding: 1.25rem;
+    }
+    
+    .teaching-narrative,
+    .thesis-narrative {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+    
+    .teaching-narrative p,
+    .thesis-narrative p {
+        font-size: 0.95rem;
+    }
+    
+    .course-progression h4,
+    .thesis-category h4 {
+        font-size: 1rem;
+    }
+    
+    .thesis-item {
+        padding-left: 0.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Contact Invitation Styling */
+.contact-invitation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.invitation-text {
+    color: var(--teal);
+    line-height: 1.6;
+}
+
+.invitation-text p {
+    margin-bottom: 0.75rem;
+}
+
+.invitation-text p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--sage);
+}
+
+/* Subtle Social Links - Now above image */
+.social-links-subtle {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    order: 2;
+}
+
+.social-link-subtle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--sage);
+    transition: color 0.3s ease;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.social-link-subtle:hover {
+    color: var(--terracotta);
+    opacity: 1;
+}
+
+.social-icon-small {
+    width: 28px;
+    height: 28px;
+}
+
+/* Craftsman's Seal - Now larger and left-aligned */
+.craftsman-seal {
+    margin: 1rem 0;
+    opacity: 0.9;
+    transition: all 0.4s ease;
+    align-self: flex-start;
+    order: 3;
+}
+
+.craftsman-seal:hover {
+    opacity: 1;
+    transform: rotate(1deg);
+}
+
+.seal-image {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    filter: grayscale(0.1) drop-shadow(0 8px 32px rgba(44, 95, 93, 0.2));
+    transition: all 0.4s ease;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border: 2px solid rgba(122, 139, 122, 0.15);
+}
+
+.seal-image:hover {
+    transform: scale(1.02) rotate(-1deg);
+    filter: grayscale(0) drop-shadow(0 12px 48px rgba(44, 95, 93, 0.3));
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(122, 139, 122, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .craftsman-seal {
+        margin: 1rem 0;
+        align-self: center;
+    }
+    
+    .seal-image {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .invitation-text {
+        font-size: 0.95rem;
+    }
+    
+    .contact-invitation {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .social-links-subtle {
+        justify-content: center;
+    }
+    
+    .social-link-subtle {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .social-icon-small {
+        width: 24px;
+        height: 24px;
     }
 }
