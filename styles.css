@@ -3174,6 +3174,22 @@ a:focus {
     position: relative;
     z-index: 1;
 }
+.student-projects {
+    float: right;
+    width: 33.33%;
+    margin-left: 1rem;
+}
+
+.student-projects a {
+    color: var(--orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.student-projects a:hover {
+    color: darken(var(--orange), 10%);
+    text-decoration: underline;
+}
 
 /* Technical Stack Section */
 .tech-stack-section {
