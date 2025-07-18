@@ -70,6 +70,26 @@ window.SBM = {
                 setTimeout(() => notification.remove(), 300);
             }
         }, 5000);
+    },
+
+    // Toggle curriculum details
+    toggleCurriculumDetails: function() {
+        const details = document.getElementById('curriculum-details');
+        const toggle = document.getElementById('curriculum-toggle');
+        const expandText = toggle.querySelector('.expand-text');
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        
+        if (isExpanded) {
+            // Collapse
+            details.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            expandText.textContent = 'View Curriculum Details';
+        } else {
+            // Expand
+            details.classList.remove('hidden');
+            toggle.setAttribute('aria-expanded', 'true');
+            expandText.textContent = 'Hide Curriculum Details';
+        }
     }
 };
 
