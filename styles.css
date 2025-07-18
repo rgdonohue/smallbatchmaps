@@ -2756,10 +2756,12 @@ a:focus {
 }
 
 #carto-workflow-image {
-    max-width: 80%;
+    flex: 0 0 auto;
+    max-width: 40%;
     height: auto;
-    margin-left: 3rem;
-    float: right;
+    margin: 0;
+    order: 2;
+    margin-left: auto;
 }
 
 /* Topographic Background */
@@ -2794,8 +2796,14 @@ a:focus {
 .carto-header {
     position: relative;
     z-index: 1;
-    /* text-align: center; */
     margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.carto-left-content {
+    flex: 1;
 }
 
 .carto-intro {
@@ -5876,14 +5884,6 @@ a:focus {
 }
 
 /* Left column content that respects floating workflow diagram */
-.carto-header {
-    overflow: hidden; /* Creates a block formatting context */
-}
-
-.carto-left-content {
-    margin-right: 45%; /* Leave space for the 40% workflow + margins */
-    padding-right: 2rem; /* Additional spacing buffer */
-}
 
 .carto-intro {
     margin-bottom: 2rem;
@@ -5907,12 +5907,14 @@ a:focus {
 /* Tech stack styling is handled by the existing .tech-stack-section rules */
 
 @media (max-width: 768px) {
-    .carto-workflow-diagram {
-        float: none;
-        width: 100%;
-        margin: 0 0 1.5rem 0;
+    .carto-header {
         display: block;
-        padding: 1.5rem;
+    }
+
+    #carto-workflow-image {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto 1.5rem;
     }
     
     .carto-left-content {
