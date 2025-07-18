@@ -5882,6 +5882,21 @@ a:focus {
     margin-bottom: 2rem;
 }
 
+/* PHM Logo styling */
+.phm-logo {
+    max-width: 200px;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.phm-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 /* Tech stack styling is handled by the existing .tech-stack-section rules */
 
 @media (max-width: 768px) {
