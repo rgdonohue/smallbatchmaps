@@ -466,7 +466,7 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/map.png');
+    background-image: url('images/map-2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2753,6 +2753,13 @@ a:focus {
     flex-direction: column;
     gap: 3rem;
     overflow: hidden;
+}
+
+#carto-workflow-image {
+    max-width: 80%;
+    height: auto;
+    margin-left: 3rem;
+    float: right;
 }
 
 /* Topographic Background */
