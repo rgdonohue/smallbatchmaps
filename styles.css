@@ -5921,3 +5921,48 @@ a:focus {
         font-size: 0.8rem;
     }
 }
+
+/* AI-Assisted Workflows Two-Column Layout */
+.ai-content-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.ai-left-content {
+  flex: 1 1 60%;
+  min-width: 0;
+}
+.ai-right-content {
+  flex: 1 1 35%;
+  min-width: 220px;
+  background: #f8f6f1;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(44,95,93,0.04);
+}
+.llm-applications-title {
+  font-family: var(--font-playfair);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--teal);
+}
+.llm-applications-list {
+  list-style: disc inside;
+  color: var(--teal);
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+.llm-applications-list li {
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 900px) {
+  .ai-content-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .ai-right-content {
+    padding: 1.25rem 1rem;
+  }
+}
