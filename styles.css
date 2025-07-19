@@ -4380,344 +4380,393 @@ a:focus {
 }
 
 /* =============================================================================
-   Career Experience Section
+   Career Experience Section - Enhanced Typography & Hierarchy
    ============================================================================= */
 
 .experience {
-    padding: var(--section-padding);
-    background: var(--warm-white);
-    position: relative;
-    overflow: hidden;
-}
-
-.experience::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(205, 92, 64, 0.02) 0%, rgba(122, 139, 122, 0.02) 100%);
-    pointer-events: none;
-}
-
-.experience-content {
-    position: relative;
-    z-index: 1;
-}
-
-.experience-intro {
-    /* text-align: center; */
-    margin-bottom: 3rem;
-}
-
-.experience-overview {
-    font-size: 1.125rem;
+    padding: var(--section-padding) 0;
     line-height: 1.7;
-    color: var(--teal);
-    max-width: 800px;
-    margin: 0 auto;
-    font-weight: 400;
 }
 
-/* Experience Header */
-.experience-header {
+.section-header {
+    margin-bottom: 4rem;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
-.experience-role {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--terracotta);
-    font-family: var(--font-playfair);
-    margin-bottom: 1.5rem;
-}
-
-/* Experience Details */
-.experience-details {
-    margin-top: 3rem;
-}
-
-.experience-grid {
+.experience-timeline {
+    max-width: 900px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 5rem;
 }
 
-@media (min-width: 1024px) {
-    .experience-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.experience-section {
-    background: var(--cream);
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid rgba(122, 139, 122, 0.1);
-    transition: all var(--transition-normal);
-}
-
-.experience-section:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: rgba(122, 139, 122, 0.2);
-}
-
-.experience-section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--teal);
-    margin-bottom: 1.5rem;
-    font-family: var(--font-playfair);
+.experience-entry {
     position: relative;
-    padding-bottom: 0.5rem;
+    display: grid;
+    gap: 2.5rem;
+    padding: 0 0 4rem 0;
 }
 
-.experience-section-title::after {
+.experience-entry:not(:last-child) {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.experience-entry:not(:last-child)::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
     height: 2px;
-    background: var(--terracotta);
-    border-radius: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.15), transparent);
 }
 
-/* Narrative Styles */
-.teaching-narrative,
-.thesis-narrative {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(122, 139, 122, 0.1);
-}
-
-.teaching-narrative p,
-.thesis-narrative p {
-    font-style: italic;
-    color: var(--sage);
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Course Overview Styles */
-.courses-overview {
+/* Enhanced Header Typography with Accordion Functionality */
+.entry-header {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    user-select: none;
 }
 
-.course-progression {
-    background: var(--warm-white);
-    padding: 1.5rem;
-    border-radius: 6px;
-    border: 1px solid rgba(122, 139, 122, 0.1);
-    transition: all var(--transition-normal);
+.entry-header:hover {
+    background: rgba(0, 0, 0, 0.02);
 }
 
-.course-progression:hover {
-    background: rgba(255, 255, 255, 0.8);
-    border-color: rgba(122, 139, 122, 0.2);
-    transform: translateX(2px);
+.entry-header:focus {
+    outline: 2px solid rgba(59, 130, 246, 0.5);
+    outline-offset: 2px;
 }
 
-.course-progression h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--terracotta);
-    margin-bottom: 0.75rem;
+.header-content {
+    flex: 1;
+    display: grid;
+    gap: 1rem;
+}
+
+.organization {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
     font-family: var(--font-playfair);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
-.course-progression p {
-    color: var(--teal);
-    line-height: 1.6;
+.role-summary {
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, 0.7);
     margin: 0;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
 }
 
-.course-progression strong {
-    color: var(--teal);
+.period-role {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.role {
     font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
 }
 
-/* Thesis Projects */
-.thesis-projects {
+.period {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Expand Icon */
+.expand-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.entry-header:hover .expand-icon {
+    color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.expand-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.entry-header[aria-expanded="true"] .expand-icon svg {
+    transform: rotate(180deg);
+}
+
+/* Content Organization with Side-by-Side Layout */
+.entry-content {
+    display: grid;
     gap: 2rem;
 }
 
-.thesis-category {
-    background: var(--warm-white);
-    padding: 1.5rem;
-    border-radius: 6px;
-    border: 1px solid rgba(122, 139, 122, 0.1);
-    transition: all var(--transition-normal);
+.focus-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.65);
 }
 
-.thesis-category:hover {
-    background: rgba(255, 255, 255, 0.8);
-    border-color: rgba(122, 139, 122, 0.2);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+.focus-areas span {
+    position: relative;
+    padding: 0.25rem 0.75rem;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-.thesis-category h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--terracotta);
-    margin-bottom: 1rem;
-    font-family: var(--font-playfair);
-    border-bottom: 1px solid rgba(122, 139, 122, 0.1);
-    padding-bottom: 0.5rem;
+.focus-areas span:hover {
+    background: rgba(0, 0, 0, 0.08);
 }
 
-.thesis-item {
-    color: var(--teal);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid rgba(205, 92, 64, 0.3);
-}
-
-.thesis-item:last-child {
-    margin-bottom: 0;
-}
-
-.thesis-item strong {
-    color: var(--teal);
-    font-weight: 600;
-}
-
-.thesis-item a {
-    color: var(--terracotta);
-    text-decoration: none;
-    font-weight: 600;
-    transition: all var(--transition-fast);
-}
-
-.thesis-item a:hover {
-    color: rgba(205, 92, 64, 0.8);
-    text-decoration: underline;
-}
-
-/* Teaching Philosophy */
-.experience-philosophy {
-    grid-column: 1 / -1;
-}
-
-.philosophy-content {
-    text-align: left;
-}
-
-.philosophy-content > p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--teal);
-    margin-bottom: 1.5rem;
-}
-
-.philosophy-principles {
+/* Accomplishments and Stats Side-by-Side Layout */
+.accomplishments {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    grid-column: 1;
 }
 
-@media (min-width: 768px) {
-    .philosophy-principles {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.accomplishments p {
+    margin: 0;
+    line-height: 1.65;
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-.principle {
-    text-align: center;
+.accomplishments p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 4px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
 }
 
-.principle h4 {
-    font-size: 1.125rem;
+.accomplishments p strong {
+    color: rgba(0, 0, 0, 0.9);
     font-weight: 600;
-    color: var(--terracotta);
-    margin-bottom: 0.75rem;
-    font-family: var(--font-playfair);
 }
 
-.principle p {
-    color: var(--teal);
-    line-height: 1.6;
-    opacity: 0.9;
+/* Responsibilities vs Achievements Color Coding */
+.accomplishments p:nth-child(odd) {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.accomplishments p:nth-child(even) {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.accomplishments p:nth-child(odd)::before {
+    background: rgba(59, 130, 246, 0.6); /* Achievement marker - blue */
+}
+
+.accomplishments p:nth-child(even)::before {
+    background: rgba(16, 185, 129, 0.6); /* Responsibility marker - green */
+}
+
+/* Vertical Stats Section - Positioned to the Right */
+.key-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    grid-column: 2;
+    align-self: start;
+    min-width: 200px;
+}
+
+.stat-pair {
+    display: grid;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-pair:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.stat-pair dt {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 500;
     margin: 0;
 }
 
+.stat-pair dd {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+}
 
+/* Create the side-by-side layout */
+.entry-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: start;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 1rem;
+}
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .experience {
-        padding: 3rem 0;
-    }
-    
-    .experience-overview {
-        font-size: 1rem;
-    }
-    
-    .experience-role {
-        font-size: 1.25rem;
-    }
-    
-    .experience-grid {
+.entry-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .entry-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
-    .experience-section {
-        padding: 1.5rem;
+    .key-stats {
+        grid-column: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-width: auto;
     }
     
-    .experience-section-title {
-        font-size: 1.25rem;
+    .stat-pair {
+        flex: 1;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-timeline {
+        max-width: none;
+        gap: 3.5rem;
     }
     
-    .tech-tags {
-        justify-content: center;
+    .experience-entry {
+        gap: 2rem;
+        padding-bottom: 3rem;
     }
     
-    .philosophy-principles {
+    .entry-header {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+    
+    .expand-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .organization {
+        font-size: 1.6rem;
+    }
+    
+    .role-summary {
+        font-size: 1.1rem;
+    }
+    
+    .period-role {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 0.5rem;
     }
     
-    .principle {
+    .focus-areas {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .accomplishments p {
+        font-size: 1rem;
+        padding-left: 1.25rem;
+    }
+    
+    .key-stats {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .stat-pair {
         text-align: left;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .entry-header {
+        padding: 0.5rem;
+        gap: 0.5rem;
     }
     
-    .course-progression,
-    .thesis-category {
-        padding: 1.25rem;
+    .expand-icon {
+        width: 24px;
+        height: 24px;
     }
     
-    .teaching-narrative,
-    .thesis-narrative {
-        margin-bottom: 1rem;
-        padding-bottom: 0.75rem;
+    .organization {
+        font-size: 1.4rem;
     }
     
-    .teaching-narrative p,
-    .thesis-narrative p {
-        font-size: 0.95rem;
-    }
-    
-    .course-progression h4,
-    .thesis-category h4 {
+    .role-summary {
         font-size: 1rem;
     }
     
-    .thesis-item {
-        padding-left: 0.75rem;
+    .accomplishments p {
         font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .key-stats {
+        gap: 0.5rem;
+    }
+    
+    .stat-pair {
+        padding: 0.625rem;
     }
 }
+
+
+
+
 
 /* =============================================================================
    New Experience Section Styles

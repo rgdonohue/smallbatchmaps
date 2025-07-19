@@ -90,6 +90,23 @@ window.SBM = {
             toggle.setAttribute('aria-expanded', 'true');
             expandText.textContent = 'Hide Curriculum Details';
         }
+    },
+
+    // Toggle experience accordion
+    toggleExperienceAccordion: function(header) {
+        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+        const contentId = header.getAttribute('aria-controls');
+        const content = document.getElementById(contentId);
+        
+        if (isExpanded) {
+            // Collapse
+            header.setAttribute('aria-expanded', 'false');
+            content.classList.remove('expanded');
+        } else {
+            // Expand
+            header.setAttribute('aria-expanded', 'true');
+            content.classList.add('expanded');
+        }
     }
 };
 
@@ -175,6 +192,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+            }
+        });
+    });
+
+    // Experience accordion functionality
+    const experienceHeaders = document.querySelectorAll('.entry-header[role="button"]');
+    experienceHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            SBM.toggleExperienceAccordion(this);
+        });
+        
+        header.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                SBM.toggleExperienceAccordion(this);
             }
         });
     });
