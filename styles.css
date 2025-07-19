@@ -2260,11 +2260,11 @@ a:focus {
 
 /* Service Example */
 .service-example {
-    margin: 2rem 0;
-    padding: 1rem 1.5rem;
-    background: var(--warm-white);
-    border-radius: 8px;
-    border-left: 4px solid var(--terracotta);
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border-left: none;
 }
 
 .example-title {
