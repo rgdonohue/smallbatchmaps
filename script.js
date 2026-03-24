@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Active navigation highlight
     function updateActiveNav() {
-        const sections = ['services', 'about', 'projects', 'contact'];
+        const sections = ['services', 'projects', 'about', 'experience', 'contact'];
         const navLinks = document.querySelectorAll('.nav-link');
         const scrollPosition = window.scrollY + 100; // Offset for better detection
         
