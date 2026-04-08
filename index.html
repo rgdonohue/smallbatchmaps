@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Small Batch Maps — GIS Consulting, Web Cartography, Vector Tiles</title>
+    <title>Small Batch Maps — Custom Geospatial Tools & Web Cartography</title>
     <meta name="description"
-        content="GIS consulting and web cartography. Geospatial data science, client-side maps, and vector tile workflows with an AI assist. Clean, fast, and honest spatial tools.">
+        content="I build custom geospatial tools — data pipelines, interactive web maps, and spatial analysis — for conservation teams, nonprofits, and research groups.">
 
     <!-- Font optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +20,6 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!-- No external CSS frameworks - Pure vanilla CSS -->
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,16 +32,14 @@
                 <a href="#hero" class="logo-link" aria-label="Small Batch Maps - Go to homepage">
                     <img src="images/logo-point-2.png" alt="Small Batch Maps compass logo" class="logo-image"
                         loading="eager" />
-                    Small Batch Maps
+                    <span class="logo-text">Small Batch Maps</span>
                 </a>
             </div>
 
             <!-- Desktop Navigation -->
             <ul class="nav-desktop" role="menubar">
-                <li role="menuitem"><a href="#services" class="nav-link">Services</a></li>
-                <li role="menuitem"><a href="#projects" class="nav-link">Projects</a></li>
+                <li role="menuitem"><a href="#work" class="nav-link">Work</a></li>
                 <li role="menuitem"><a href="#about" class="nav-link">About</a></li>
-                <li role="menuitem"><a href="#experience" class="nav-link">Experience</a></li>
                 <li role="menuitem"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
 
@@ -61,10 +57,8 @@
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="mobile-menu hidden" role="menu" aria-labelledby="mobile-menu-btn">
             <ul class="mobile-nav-list" role="none">
-                <li role="menuitem"><a href="#services" class="nav-link">Services</a></li>
-                <li role="menuitem"><a href="#projects" class="nav-link">Projects</a></li>
+                <li role="menuitem"><a href="#work" class="nav-link">Work</a></li>
                 <li role="menuitem"><a href="#about" class="nav-link">About</a></li>
-                <li role="menuitem"><a href="#experience" class="nav-link">Experience</a></li>
                 <li role="menuitem"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -77,496 +71,113 @@
             <div class="hero-bg" aria-hidden="true"></div>
             <div class="hero-content">
                 <div class="hero-title-container">
-                    <img src="images/logo-point-2.png" alt="Small Batch Maps compass logo" class="hero-logo"
-                        loading="eager" />
                     <div class="hero-text-content">
                         <h1 id="hero-title" class="hero-title animate-fade-in">
                             Small Batch Maps
                         </h1>
                         <p class="hero-subtitle animate-fade-in-delay">
-                            Fast, transparent geospatial tooling for climate, public health, and conservation teams.
+                            I build geospatial tools with AI-assisted workflows.
                         </p>
-                        <div class="cta-buttons animate-fade-in-delay-2">
-                            <button class="cta-button cta-primary" onclick="SBM.scrollToSection('services')"
-                                aria-describedby="cta-description-services">
-                                Explore Services
-                            </button>
-                            <button class="cta-button cta-secondary" onclick="SBM.scrollToSection('projects')"
-                                aria-describedby="cta-description-projects">
-                                See recent projects
+                        <p class="hero-subtitle-secondary animate-fade-in-delay-2">
+                            Data pipelines, interactive maps, spatial analysis.
+                        </p>
+                        <!-- <p class="hero-subtitle-secondary animate-fade-in-delay-2">
+                            Conservation teams, nonprofits, and research groups hire me when they have a spatial data problem and no in-house GIS developer.
+                        </p> -->
+                        <div class="cta-buttons animate-fade-in-delay-3">
+                            <button class="cta-button cta-primary" onclick="SBM.scrollToSection('work')"
+                                aria-describedby="cta-description-work">
+                                See my work
                             </button>
                         </div>
-                        <span id="cta-description-services" class="sr-only">Navigate to services section to learn about offerings</span>
-                        <span id="cta-description-projects" class="sr-only">Navigate to projects section to see recent work</span>
+                        <span id="cta-description-work" class="sr-only">Navigate to selected work section</span>
                     </div>
                 </div>
             </div>
             <div class="compass-rose" aria-hidden="true"></div>
         </section>
-    </main>
 
-    <!-- Services Section -->
-    <section id="services" class="services" aria-labelledby="services-title">
+    <!-- Selected Work Section -->
+    <section id="work" class="projects" aria-labelledby="work-title">
         <div class="container">
-            <h2 id="services-title" class="section-title">My Services &amp; Expertise</h2>
-            <p class="section-subtitle">AI-enhanced spatial workflows, guided by care &amp; domain expertise </p>
+            <h2 id="work-title" class="section-title">Selected Work</h2>
+            <p class="section-subtitle">Recent builds and R&D — not polished case studies, but working tools in active development.</p>
 
-            <div class="services-grid" role="group" aria-labelledby="services-title">
-                <!-- Service Card 1 -->
-                <article class="service-card" data-title="Geospatial Data Science">
-                    <div class="service-icon" aria-hidden="true">
-                        <i class="ph ph-chart-line"></i>
+            <div class="projects-grid" role="group" aria-labelledby="work-title">
+
+                <!-- Geomockery -->
+                <article class="project-item">
+                    <img src="images/geomockery.png" alt="Geomockery screenshot" class="project-screenshot" loading="lazy">
+                    <h3 class="project-title">Geomockery</h3>
+                    <p class="project-description">Browser-based synthetic geospatial data generator. Draw a boundary, pick a geometry type, configure attributes, and export realistic mock GeoJSON or Shapefile data — no server required.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">OpenLayers</span>
+                        <span class="tech-tag">Turf.js</span>
+                        <span class="tech-tag">Claude Code</span>
                     </div>
-                    <h3 class="service-title">Geospatial Data Science</h3>
-                    <p class="service-description">
-                        I don't just clean data—I interrogate it. With Python, geopandas, and a healthy skepticism for
-                        null-filled shapefiles, I build workflows that turn chaos into clarity. Pattern-finding,
-                        truth-surfacing, and always auditable.
-                    </p>
-
-                    <button class="learn-more-btn" data-service="geospatial" aria-expanded="false"
-                        aria-controls="geospatial-content" aria-describedby="geospatial-desc">
-                        See how I wrangle space <span aria-hidden="true"
-                            style="font-size:1.1em;vertical-align:middle;">&#8594;</span>
-                    </button>
-                    <span id="geospatial-desc" class="sr-only">Expand to see detailed information about geospatial data
-                        science services</span>
+                    <div class="project-actions">
+                        <a class="project-action" href="https://geomockery.com/" target="_blank" rel="noopener">Live app →</a>
+                        <a class="project-action" href="https://github.com/rgdonohue/geomockery" target="_blank" rel="noopener">GitHub →</a>
+                    </div>
                 </article>
 
-                <!-- Service Card 2 -->
-                <article class="service-card" data-title="Web Cartography">
-                    <div class="service-icon" aria-hidden="true">
-                        <i class="ph ph-globe"></i>
+                <!-- Santa Fe Detour -->
+                <article class="project-item">
+                    <img src="images/detour.png" alt="Santa Fe Detour screenshot" class="project-screenshot" loading="lazy">
+                    <h3 class="project-title">Santa Fe Detour</h3>
+                    <p class="project-description">Routing app that finds the shortest path between two points, then suggests worthwhile detour stops — historic sites, art, scenic overlooks — with exact time and distance costs.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">MapLibre GL JS</span>
+                        <span class="tech-tag">OpenRouteService</span>
                     </div>
-                    <h3 class="service-title">Web Cartography</h3>
-                    <p class="service-description">
-                        A good map doesn't just inform—it moves. I design web maps and spatial dashboards that load
-                        fast, look sharp, and do exactly what they should. From climate stories to conservation tools, every pixel
-                        has a purpose.
-                    </p>
-                    <button class="learn-more-btn" data-service="cartography" aria-expanded="false"
-                        aria-controls="cartography-content" aria-describedby="cartography-desc">
-                        View cartography with a pulse <span aria-hidden="true"
-                            style="font-size:1.1em;vertical-align:middle;">&#8594;</span>
-                    </button>
-                    <span id="cartography-desc" class="sr-only">Expand to see detailed information about web cartography
-                        services</span>
+                    <div class="project-actions">
+                        <a class="project-action" href="https://github.com/rgdonohue/detour" target="_blank" rel="noopener">GitHub →</a>
+                    </div>
                 </article>
 
-                <!-- Service Card 3 -->
-                <article class="service-card service-card-wide" data-title="AI-Assisted Workflows">
-                    <div class="service-icon" aria-hidden="true">
-                        <i class="ph ph-cpu"></i>
+                <!-- Tava -->
+                <article class="project-item">
+                    <img src="images/tava.png" alt="Tava route planner screenshot" class="project-screenshot" loading="lazy">
+                    <h3 class="project-title">Tava</h3>
+                    <p class="project-description">Route planner for cyclists and runners that generates optimized loops based on distance, elevation gain, surface type, and shape. Supports GPX export and covers Colorado Front Range terrain.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">routing algorithms</span>
+                        <span class="tech-tag">elevation data</span>
+                        <span class="tech-tag">GPX export</span>
+                        <span class="tech-tag">Claude Code</span>
                     </div>
-                    <h3 class="service-title">AI-Assisted Workflows</h3>
-                    <p class="service-description">
-                        I fold large language models and intelligent agents into GIS workflows without losing the plot.
-                        Think: faster code, automated insights, and spatial systems that scale—without falling for hype or one-click magic.
-                    </p>
-                    <button class="learn-more-btn" data-service="ai-workflows" aria-expanded="false"
-                        aria-controls="ai-workflows-content" aria-describedby="ai-workflows-desc">
-                        How I use AI (and where I don't) <span aria-hidden="true"
-                            style="font-size:1.1em;vertical-align:middle;">&#8594;</span>
-                    </button>
-                    <span id="ai-workflows-desc" class="sr-only">Expand to see detailed information about AI-assisted
-                        workflow services</span>
+                    <div class="project-actions">
+                        <a class="project-action" href="https://tava-production.up.railway.app/" target="_blank" rel="noopener">Live app →</a>
+                    </div>
                 </article>
+
+                <!-- Earthtile Finder -->
+                <article class="project-item">
+                    <img src="images/earthtile-finder.png" alt="Earthtile Finder screenshot" class="project-screenshot" loading="lazy">
+                    <h3 class="project-title">Earthtile Finder</h3>
+                    <p class="project-description">Search, filter, and preview satellite imagery scenes from the Earth Search STAC API. Filter by date range and cloud cover, visualize scene footprints on a map, and browse thumbnails — search state encoded in URL for shareability.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">MapLibre GL JS</span>
+                        <span class="tech-tag">STAC API</span>
+                        <span class="tech-tag">Zustand</span>
+                    </div>
+                    <div class="project-actions">
+                        <a class="project-action" href="https://github.com/rgdonohue/earthtile-finder" target="_blank" rel="noopener">GitHub →</a>
+                        <a class="project-action" href="https://rgdonohue.github.io/earthtile-finder/" target="_blank" rel="noopener">Live demo →</a>
+                    </div>
+                </article>
+
             </div>
-
-            <!-- Service Details Expansion Section -->
-            <div id="service-expansion" class="service-expansion hidden" role="region" aria-live="polite">
-                <div class="service-expansion-header">
-                    <h3 id="expansion-title" class="expansion-title"></h3>
-                    <button id="close-expansion" class="close-expansion-btn" aria-label="Close service details">
-                        <i class="ph ph-x" role="img" aria-label="Close icon"></i>
-                    </button>
-                </div>
-
-                <!-- Geospatial Data Science Content -->
-                <div id="geospatial-content" class="expansion-content hidden">
-                    <div class="geospatial-expansion">
-                        <!-- Section Intro -->
-                        <div class="geo-header">
-                            <p class="geo-intro"><strong>Exploratory Geospatial Data Science (ESDA)</strong> brings
-                                together location intelligence and exploratory data analysis to uncover patterns,
-                                trends, and relationships in our built and natural worlds. I help clients turn messy,
-                                siloed datasets into clean, interoperable formats and curated insights—ready to inform
-                                smarter decisions in planning, policy, logistics, public health, and client-specific
-                                needs.
-                        </div>
-
-                        <!-- Visual Workflow -->
-                        <div class="workflow-section">
-                            <h3 class="workflow-title">My Approach to Spatial Science</h3>
-                            <div class="workflow-pipeline">
-                                <div class="workflow-step">
-                                    <h4>Raw Geographic Data</h4>
-                                    <div class="workflow-icon">
-                                        <i class="ph ph-database"></i>
-                                    </div>
-                                    <p>Spatial datasets, APIs, field collection inputs</p>
-                                </div>
-
-                                <div class="workflow-step">
-                                    <h4>Data Cleaning &amp; Analysis</h4>
-                                    <div class="workflow-icon">
-                                        <i class="ph ph-gear"></i>
-                                    </div>
-                                    <p>Python + Jupyter for wrangling, exploratory analysis, and QA/QC</p>
-                                </div>
-
-                                <div class="workflow-step">
-                                    <h4>Visual Insights</h4>
-                                    <div class="workflow-icon">
-                                        <i class="ph ph-chart-bar"></i>
-                                    </div>
-                                    <p>Clear charts, spatial stats, and storytelling visuals</p>
-                                </div>
-
-                                <div class="workflow-step">
-                                    <h4>Scalable Infrastructure</h4>
-                                    <div class="workflow-icon">
-                                        <i class="ph ph-cloud"></i>
-                                    </div>
-                                    <p>Custom APIs, spatial databases, and reproducible pipelines</p>
-                                </div>
-
-                                <div class="workflow-step">
-                                    <h4>Interactive Web Maps</h4>
-                                    <div class="workflow-icon">
-                                        <i class="ph ph-map-pin"></i>
-                                    </div>
-                                    <p>Custom UX/UI for intuitive data exploration</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Core Capabilities -->
-                        <div class="capabilities-section">
-                            <h3 class="capabilities-title">Core Capabilities</h3>
-                            <div class="capabilities-grid">
-                                <div class="capability-column">
-                                    <div class="capability-item">
-                                        <h4>Exploratory Spatial Data Analysis (ESDA)</h4>
-                                        <p>Identify spatial clusters, trends, and outliers using robust statistical and
-                                            visual methods.</p>
-                                    </div>
-                                    <div class="capability-item">
-                                        <h4>AI-Assisted Predictive Modeling</h4>
-                                        <p>Forecast future scenarios using spatial machine learning and synthetic data
-                                            generation.</p>
-                                    </div>
-                                </div>
-                                <div class="capability-column">
-                                    <div class="capability-item">
-                                        <h4>Time-Series &amp; Spatiotemporal Modeling</h4>
-                                        <p>Understand how geographic phenomena change over time — seasonal patterns,
-                                            mobility, and dynamic shifts.</p>
-                                    </div>
-                                    <div class="capability-item">
-                                        <h4>Data Integration &amp; API Design</h4>
-                                        <p>Clean, combine, and operationalize datasets via modern spatial databases and
-                                            scalable API pipelines.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Call-to-Action -->
-                        <div class="geo-cta-section">
-                            <div class="geo-cta-buttons">
-                                <button class="cta-button cta-primary" onclick="scrollToSection('contact')">
-                                    Let's Talk
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web Cartography Content -->
-                <div id="cartography-content" class="expansion-content hidden">
-                    <div class="cartography-expansion">
-                        <!-- Section Intro -->
-                        <div class="carto-header">
-                            <img id="carto-workflow-image" src="images/workflow.png" alt="Web Cartography Workflow diagram showing a user-centered, performance-oriented process for interactive mapping" class="carto-workflow-image" loading="lazy">
-
-                            <div class="carto-left-content">
-
-                                <p class="carto-intro">
-                                    With over 15 years of experience in digital cartography, I’ve trained the next
-                                    generation of web mappers through rigorous academic work and hands-on teaching. I
-                                    proudly earned
-                                    my <strong>PhD in Geography from the University of Wisconsin–Madison</strong>, where
-                                    my
-                                    research focused on applying emerging web standards—HTML, CSS, and JavaScript—to
-                                    interactive map design.
-                                </p>
-                                <img src="images/phm.png" alt="map of plant hardiness zones in the US" class="phm-logo"
-                                    loading="lazy">
-                                <p>
-                                    As the founding architect of an <a href="https://newmapsplus.as.uky.edu/programs"
-                                        target="_blank">award-winning online graduate program</a>, I’ve helped students
-                                    create maps that are both functional and enjoyable to use. My approach blends design
-                                    ethics, accessibility, and user experience with performance-first practices like
-                                    tile
-                                    generation and lazy loading &ndash; grounded in the art and science of cartography.
-                                </p>
-
-                            </div> <!-- Close carto-left-content -->
-                        </div>
-                    </div>
-                </div>
-
-                    <!-- AI-Assisted Workflows Content -->
-                    <div id="ai-workflows-content" class="expansion-content hidden">
-                        <div class="ai-workflows-expansion">
-                            <!-- Short, concrete opener -->
-                            <div class="ai-header">
-                                <div class="ai-content-grid">
-                                    <div class="ai-left-content">
-                                        <p class="ai-intro"><em>I use LLMs to speed test writing, style generation, and refactors—inside guardrails.</em> You get cleaner code, better docs, and fewer regressions. No model touches your data without approval, and every suggestion ships behind tests.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Use-Case Grid -->
-                            <div class="ai-usecases">
-                                <div class="ai-usecase-grid">
-                                    <div class="ai-usecase">
-                                        <h5>Refactor brittle GeoPandas script</h5>
-                                        <p>Split 1k lines into testable modules; remove hotspots</p>
-                                        <a href="https://github.com/rgdonohue/flowfinder" target="_blank" rel="noopener">Repo →</a>
-                                    </div>
-                                    <div class="ai-usecase">
-                                        <h5>Generate MapLibre styles</h5>
-                                        <p>Turn palette briefs into JSON styles; iterate fast</p>
-                                        <a href="https://github.com/rgdonohue/tilecraft" target="_blank" rel="noopener">Repo →</a>
-                                    </div>
-                                    <div class="ai-usecase">
-                                        <h5>Write failing tests</h5>
-                                        <p>Surface edge cases in hydrology/ETL pipelines</p>
-                                        <a href="https://github.com/rgdonohue/flowfinder" target="_blank" rel="noopener">Repo →</a>
-                                    </div>
-                                    <div class="ai-usecase">
-                                        <h5>Explain this notebook</h5>
-                                        <p>Extract decisions/assumptions into readable docs</p>
-                                        <a href="https://github.com/rgdonohue/ghost-forest-watcher" target="_blank" rel="noopener">Repo →</a>
-                                    </div>
-                                    <div class="ai-usecase">
-                                        <h5>Catch logic gaps in ETL</h5>
-                                        <p>Diagram flows; propose safer control paths</p>
-                                        <a href="https://github.com/rgdonohue/mbtiles-viewer" target="_blank" rel="noopener">Repo →</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Case Study Section -->
-                            <div class="service-example">
-                                <div class="case-study-content">
-                                    <div class="case-study-visual">
-                                        <img src="images/tilecraft-small.png"
-                                            alt="TileCraft application interface showing AI-assisted vector tile generation"
-                                            class="case-study-image" loading="lazy">
-                                    </div>
-                                    <div class="case-study-text">
-                                        <h4 class="example-title">A Case Study in Human-AI Collaboration: Tilecraft</h4>
-                                        <p class="example-description">
-                                            <strong>Tilecraft</strong> is an AI-assisted CLI tool I built that
-                                            demonstrates these principles in action. It combines OpenStreetMap data
-                                            processing with <strong>AI-powered schema generation</strong> and
-                                            <strong>prompt-based style design</strong>. Users provide natural language
-                                            descriptions like "subalpine dusk" or "urban midnight" and the system
-                                            generates complete vector tile pipelines with beautiful, context-aware
-                                            cartographic styles.
-                                        </p>
-                                        <a href="https://github.com/rgdonohue/tilecraft" class="example-link"
-                                            target="_blank">
-                                            View on GitHub <span aria-hidden="true">→</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <!-- Featured Case Study -->
-                            <div class="featured-case-study">
-                                <div class="featured-content">
-                                    <div class="featured-text">
-                                        <div class="featured-label">Featured Deep-Dive</div>
-                                        <h4 class="featured-title">Building Production AI-Assisted Software</h4>
-                                        <p class="featured-description">
-                                            A comprehensive 5-part technical case study covering architecture patterns,
-                                            testing strategies, and lessons learned from building Tilecraft—from
-                                            prototype to production.
-                                        </p>
-                                        <div class="featured-highlights">
-                                            <span class="highlight-item">
-                                                <i class="ph ph-chart-bar"
-                                                    style="width: 1em; height: 1em; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i>
-                                                Architecture Patterns
-                                            </span>
-                                            <span class="highlight-item">
-                                                <i class="ph ph-flask"
-                                                    style="width: 1em; height: 1em; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i>
-                                                Testing Strategies
-                                            </span>
-                                            <span class="highlight-item">
-                                                <i class="ph ph-chart-line"
-                                                    style="width: 1em; height: 1em; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i>
-                                                Performance Analysis
-                                            </span>
-                                        </div>
-                                        <a href="agentic-workflows.html" class="featured-cta">
-                                            Read the Complete Case Study <span aria-hidden="true">→</span>
-                                        </a>
-                                    </div>
-                                    <div class="featured-visual">
-                                        <div class="code-preview">
-                                            <div class="code-header">
-                                                <span class="code-dot red"></span>
-                                                <span class="code-dot yellow"></span>
-                                                <span class="code-dot green"></span>
-                                            </div>
-                                            <div class="code-content">
-                                                <code>
-                                                <span class="code-comment"># AI-assisted schema generation</span><br>
-                                                <span class="code-keyword">def</span> <span class="code-function">generate_schema</span>(<span class="code-param">prompt</span>):<br>
-                                                &nbsp;&nbsp;<span class="code-string">"subalpine dusk"</span> <span class="code-operator">→</span><br>
-                                                &nbsp;&nbsp;<span class="code-output">complete vector pipeline</span>
-                                            </code>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
     </section>
 
-    <!-- Projects Section (moved above About/Experience) -->
-    <section id="projects" class="projects" aria-labelledby="projects-title">
+    <!-- Divider Section -->
+    <section class="process" aria-hidden="true">
         <div class="container">
-            <h2 id="projects-title" class="section-title">Recent Projects</h2>
-            <p class="section-subtitle">Evidence over adjectives. A few representative builds and experiments that show how I work and what changes for a user.</p>
-
-            <div class="projects-grid" role="group" aria-labelledby="projects-title">
-                <article class="project-item" role="button" tabindex="0"
-                    onclick="window.open('https://whohbsagdashboard.surge.sh/', '_blank')"
-                    onkeydown="SBM.handleProjectKeydown(event, 'https://whohbsagdashboard.surge.sh/')"
-                    aria-label="View WHO Outbreak Dashboard">
-                    <div class="project-icon" aria-hidden="true">
-                        <i class="ph ph-first-aid"></i>
-                    </div>
-                    <h3 class="project-title">WHO Outbreak Dashboard</h3>
-                    <p class="project-description">Situational awareness for outbreaks—clear visuals for faster briefings</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">JS</span>
-                        <span class="tech-tag">Dashboard</span>
-                        <span class="tech-tag">Public Health</span>
-                    </div>
-                    <div class="project-actions">
-                        <a class="project-action" href="https://whohbsagdashboard.surge.sh/" target="_blank" rel="noopener" onclick="event.stopPropagation();">Live</a>
-                    </div>
-                </article>
-
-                <article class="project-item" role="button" tabindex="0"
-                    onclick="window.open('https://github.com/rgdonohue/satellite-embeddings-change', '_blank')"
-                    onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/satellite-embeddings-change')"
-                    aria-label="View Satellite Embeddings Change project on GitHub">
-                    <div class="project-icon" aria-hidden="true">
-                        <i class="ph ph-radar"></i>
-                    </div>
-                    <h3 class="project-title">Satellite Embeddings Change</h3>
-                    <p class="project-description">Visualize spatial change via embedding differences</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">JS</span>
-                        <span class="tech-tag">Embeddings</span>
-                        <span class="tech-tag">Visualization</span>
-                    </div>
-                    <div class="project-actions">
-                        <a class="project-action" href="https://github.com/rgdonohue/satellite-embeddings-change" target="_blank" rel="noopener" onclick="event.stopPropagation();">Repo</a>
-                    </div>
-                </article>
-
-                <article class="project-item" role="button" tabindex="0"
-                    onclick="window.open('https://github.com/rgdonohue/flowfinder', '_blank')"
-                    onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/flowfinder')"
-                    aria-label="View FlowFinder project on GitHub">
-                    <div class="project-icon" aria-hidden="true">
-                        <i class="ph ph-drop"></i>
-                    </div>
-                    <h3 class="project-title">FlowFinder</h3>
-                    <p class="project-description">Compare watershed boundaries across tools for accuracy and consistency</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Hydrology</span>
-                        <span class="tech-tag">ESDA</span>
-                    </div>
-                    <div class="project-actions">
-                        <a class="project-action" href="https://github.com/rgdonohue/flowfinder" target="_blank" rel="noopener" onclick="event.stopPropagation();">Repo</a>
-                    </div>
-                </article>
-
-                <article class="project-item" role="button" tabindex="0"
-                    onclick="window.open('https://github.com/rgdonohue/cartographic-style-editor', '_blank')"
-                    onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/cartographic-style-editor')"
-                    aria-label="View Cartographic Style Editor project on GitHub">
-                    <div class="project-icon" aria-hidden="true">
-                        <i class="ph ph-pen-nib"></i>
-                    </div>
-                    <h3 class="project-title">Cartographic Style Editor</h3>
-                    <p class="project-description">Interactive style design for Colorado infrastructure</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">JS</span>
-                        <span class="tech-tag">MapLibre</span>
-                        <span class="tech-tag">Front-end</span>
-                    </div>
-                    <div class="project-actions">
-                        <a class="project-action" href="https://github.com/rgdonohue/cartographic-style-editor" target="_blank" rel="noopener" onclick="event.stopPropagation();">Repo</a>
-                    </div>
-                </article>
-
-                <article class="project-item" role="button" tabindex="0"
-                    onclick="window.open('https://github.com/rgdonohue/mbtiles-viewer', '_blank')"
-                    onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/mbtiles-viewer')"
-                    aria-label="View MBTiles Viewer project on GitHub">
-                    <div class="project-icon" aria-hidden="true">
-                        <i class="ph ph-map-trifold"></i>
-                    </div>
-                    <h3 class="project-title">MBTiles Viewer</h3>
-                    <p class="project-description">Explore and inspect vector tile datasets interactively</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">JS</span>
-                        <span class="tech-tag">MapLibre</span>
-                        <span class="tech-tag">Vector Tiles</span>
-                    </div>
-                    <div class="project-actions">
-                        <a class="project-action" href="https://github.com/rgdonohue/mbtiles-viewer" target="_blank" rel="noopener" onclick="event.stopPropagation();">Repo</a>
-                    </div>
-                </article>
-
-                <article class="project-item" role="button" tabindex="0"
-                    onclick="window.open('https://github.com/rgdonohue/ghost-forest-watcher', '_blank')"
-                    onkeydown="SBM.handleProjectKeydown(event, 'https://github.com/rgdonohue/ghost-forest-watcher')"
-                    aria-label="View Ghost Forest Watcher project on GitHub">
-                    <div class="project-icon" aria-hidden="true">
-                        <i class="ph ph-tree-evergreen"></i>
-                    </div>
-                    <h3 class="project-title">Ghost Forest Watcher</h3>
-                    <p class="project-description">Post-fire recovery monitoring with Sentinel-2 indices and lightweight ML</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Sentinel-2</span>
-                        <span class="tech-tag">ML</span>
-                    </div>
-                    <div class="project-actions">
-                        <a class="project-action" href="https://github.com/rgdonohue/ghost-forest-watcher" target="_blank" rel="noopener" onclick="event.stopPropagation();">Repo</a>
-                    </div>
-                </article>
-            </div>
         </div>
     </section>
 
@@ -574,124 +185,46 @@
     <section id="about" class="about" aria-labelledby="about-title">
         <div class="container">
             <div class="about-wrapper">
-                <h2 id="about-title" class="section-title">About Richard Donohue</h2>
+                <h2 id="about-title" class="section-title">About</h2>
 
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="images/richard.png"
-                            alt="Richard Donohue, founder of Small Batch Maps, professional headshot"
+                        <img src="images/richard-02.png"
+                            alt="Richard Donohue, founder of Small Batch Maps"
                             class="about-logo-image" loading="lazy">
                     </div>
 
                     <div class="about-content">
-                        <h3 class="about-subtitle">Crafting Maps with Purpose</h3>
                         <p class="about-text">
-                            With a Ph.D. in Geography, GIS, and Cartography, I specialize in transforming complex geospatial data into meaningful insights and beautiful, functional maps. My approach combines traditional cartographic principles with modern web technologies and current AI-assisted workflows.
+                            I'm a geographer and cartographer from Durango, Colorado — now based in Santa Fe, NM, where I spend my off-hours hiking and skiing the Mountain West.
                         </p>
                         <p class="about-text">
-                            I believe in ethical data practices and human-centered design. Every project is treated as a unique challenge, deserving custom solutions rather than cookie-cutter approaches. Whether you need sophisticated spatial analysis, interactive web applications, or AI-assisted workflows, I bring both technical expertise and creative vision to your geospatial challenges.
+                            I finished my PhD in Geography at UW–Madison in 2014, where my research focused on web mapping with emerging open web standards and open source tooling. From there I designed, built, and taught the graduate-level digital mapping curriculum for <a href="https://newmapsplus.as.uky.edu/" target="_blank" rel="noopener">New Maps Plus</a> — an award-winning program whose students have taken home four NACIS student dynamic map competition wins.
                         </p>
                         <p class="about-text">
-                            Born and raised in Durango, CO, I enjoy the outdoors, hiking, and skiing.
+                            I stepped away from academia in 2024 to explore what these tools could do in industry, government, and the nonprofit sector. That curiosity is still what drives the work.
                         </p>
-                        <p class="open-to-roles">Open to full-time and contract roles — remote or Mountain West.</p>
+                        <p class="about-text">
+                            Lately I've been building with AI — using Claude Code and agents as a core part of my development workflow. It's changed how fast I can go from spatial problem to working tool.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Career Experience Section -->
-    <section id="experience" class="experience" aria-labelledby="experience-title">
-        <div class="container">
-            <header class="section-header">
-                <h2 id="experience-title" class="section-title">Experience at a Glance</h2>
-            </header>
-            
-            <div class="experience-timeline">
-                
-                <!-- University of Kentucky -->
-                <article class="experience-entry">
-                    <header class="entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="uky-content">
-                        <div class="header-content">
-                            <h3 class="organization">University of Kentucky</h3>
-                            <p class="role-summary">Postdoctoral Scholar &amp; Assistant Professor 2014 &ndash; 2024</p>
-                            <div class="focus-areas">
-                                <span>Digital Cartography</span>
-                                <span>Web GIS</span>
-                                <span>Open Source Development</span>
-                            </div>
-                        </div>
-                        <div class="expand-icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
-                            </svg>
-                        </div>
-                    </header>
-                    
-                    <div class="entry-content" id="uky-content">
-                        <div class="accomplishments">
-                            <p><strong>University of Kentucky — Program Architect &amp; Assistant Professor (2014–2024)</strong></p>
-                            <p><strong>Challenge:</strong> Build a cutting-edge graduate program in digital cartography that met professional standards and stayed reproducible.</p>
-                            <p><strong>What I built:</strong> A 9-course online MS/certificate program in Digital Mapping, spanning web mapping, geospatial analysis, UX design, and open-source development. Designed all core curriculum, championed reproducible workflows using Jupyter + version control.</p>
-                            <p><strong>Impact:</strong> 30+ MS and 50+ certificate graduates placed at USGS, Cornell, and The New York Times. Student projects won national NACIS and CaGIS awards.</p>
-                            <p><strong>Evidence:</strong> Program page, Student work gallery</p>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- World Health Organization -->
-                <article class="experience-entry">
-                    <header class="entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="who-content">
-                        <div class="header-content">
-                            <h3 class="organization">World Health Organization</h3>
-                            <p class="role-summary">Geospatial Consultant 2015 &ndash; 2020</p>
-                            <div class="focus-areas">
-                                <span>Dashboard Design</span>
-                                <span>Network Visualization</span>
-                                <span>Pathogen Tracking</span>
-                            </div>
-                        </div>
-                        <div class="expand-icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
-                            </svg>
-                        </div>
-                    </header>
-                    
-                    <div class="entry-content" id="who-content">
-                        <div class="accomplishments">
-                            <p><strong>World Health Organization — Geospatial Consultant (2015–2020)</strong></p>
-                            <p><strong>Challenge:</strong> Provide decision-makers with real-time spatial intelligence during disease outbreaks.</p>
-                            <p><strong>What I built:</strong> Internal dashboards, pathogen‑network visualizations, and public‑facing tools to clarify complex epidemiological data.</p>
-                            <p><strong>Impact:</strong> Improved outbreak response briefings for program leads; supported research resulting in a peer‑reviewed publication on decision‑support tools.</p>
-                            <p><strong>Evidence:</strong> <a href="https://whohbsagdashboard.surge.sh/" target="_blank" rel="noopener">Live dashboard</a> · Tool screenshots (below)</p>
-                            <div class="who-screens">
-                                <img src="images/who-map.png" alt="WHO dashboard map view screenshot" loading="lazy" style="max-width:100%;height:auto;margin-top:0.5rem;"/>
-                                <img src="images/who-dashboard.png" alt="WHO dashboard indicators screenshot" loading="lazy" style="max-width:100%;height:auto;margin-top:0.5rem;"/>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section DUPLICATE REMOVED -->
-
     <!-- Contact Section -->
     <section id="contact" class="contact" aria-labelledby="contact-title">
         <div class="container">
-            <h2 id="contact-title" class="section-title">Ready for collaboration?</h2>
+            <h2 id="contact-title" class="section-title">Get in touch</h2>
 
             <div class="contact-wrapper">
                 <div class="contact-grid">
                     <!-- Contact Form -->
                     <div class="contact-form">
-                        <h3 class="contact-subtitle">Get in Touch</h3>
+                        <h3 id="form-heading" class="contact-subtitle">Send a message</h3>
                         <form id="contact-form" class="form" action="https://api.web3forms.com/submit" method="POST"
-                            novalidate aria-labelledby="contact-subtitle">
+                            novalidate aria-labelledby="form-heading">
                             <!-- Web3Forms Access Key -->
                             <input type="hidden" name="access_key" value="ef05cb8e-e6e4-4c1a-a75b-9975ed516080">
 
@@ -712,7 +245,7 @@
                             <div class="form-group">
                                 <label for="comment" class="form-label">Comment *</label>
                                 <textarea id="comment" name="comment" rows="4" required class="form-input"
-                                    placeholder="Share your spatial challenge—I work best when conversations start from curiosity, not pressure."
+                                    placeholder="What are you working on?"
                                     aria-describedby="comment-error"></textarea>
                                 <div id="comment-error" class="field-error" role="alert" aria-live="polite"></div>
                             </div>
@@ -727,31 +260,27 @@
                         </form>
 
                         <p class="form-note">
-                            I typically respond within 24 hours. Most projects start with a free discovery call—to find
-                            the signal in the noise and chart a direction together.
+                            I typically respond within 24 hours.
                         </p>
                     </div>
 
                     <!-- Contact Invitation -->
                     <div class="contact-info">
-                        <h3 class="contact-subtitle">Let's Make Something Thoughtful Together</h3>
+                        <h3 class="contact-subtitle">Let's work together</h3>
 
                         <div class="contact-invitation">
                             <div class="invitation-text">
-                                <p>Whether you're mapping recovery networks, building smarter dashboards, or just want
-                                    to talk shop about spatial ethics—I'm all ears.</p>
-                                <!-- Subtle Social Links -->
+                                <p>Whether you're mapping conservation areas, building spatial dashboards, or need a GIS developer for a bounded project — I'm open to it.</p>
                                 <div class="social-links-subtle">
                                     <a href="https://github.com/rgdonohue" class="social-link-subtle" target="_blank"
-                                        title="GitHub">
+                                        rel="noopener" title="GitHub">
                                         <svg class="social-icon-small" fill="currentColor" viewBox="0 0 24 24">
                                             <path
                                                 d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
                                         </svg>
                                     </a>
-
                                     <a href="https://instagram.com/rgdonohue" class="social-link-subtle" target="_blank"
-                                        title="Instagram">
+                                        rel="noopener" title="Instagram">
                                         <svg class="social-icon-small" fill="currentColor" viewBox="0 0 24 24">
                                             <path
                                                 d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
@@ -759,15 +288,14 @@
                                     </a>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
