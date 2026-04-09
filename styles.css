@@ -430,7 +430,7 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: var(--header-height) 0 6rem;
+    padding: calc(var(--header-height) + 2rem) 2rem 2rem;
 }
 
 .hero-bg {
