@@ -886,6 +886,13 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
     transform: scale(1.05);
 }
 
+.about-intro {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
 .about-text {
     color: var(--sage);
     margin-bottom: 1.5rem;
