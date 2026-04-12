@@ -1372,12 +1372,12 @@ a:focus {
     }
 
     .contact-invitation {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .social-links-subtle {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .social-link-subtle {
