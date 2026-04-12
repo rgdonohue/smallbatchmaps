@@ -21,7 +21,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=6">
 </head>
 
 <body>
@@ -89,13 +89,17 @@
                                 aria-describedby="cta-description-work">
                                 See my work
                             </button>
+                            <button class="cta-button cta-secondary" onclick="SBM.scrollToSection('contact')"
+                                aria-describedby="cta-description-contact">
+                                Get in touch
+                            </button>
                         </div>
                         <span id="cta-description-work" class="sr-only">Navigate to selected work section</span>
+                        <span id="cta-description-contact" class="sr-only">Navigate to contact section</span>
                     </div>
                 </div>
             </div>
-            <div class="compass-rose" aria-hidden="true"></div>
-        </section>
+            </section>
 
     <!-- Selected Work Section -->
     <section id="work" class="projects" aria-labelledby="work-title">
@@ -110,14 +114,10 @@
                     <img src="images/geomockery.png" alt="Geomockery screenshot" class="project-screenshot" loading="lazy">
                     <h3 class="project-title">Geomockery</h3>
                     <p class="project-description">Generate synthetic GeoJSON and Shapefile data in the browser. Draw a boundary, configure geometry types and rule-driven attributes, export. No server, no signup.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">OpenLayers</span>
-                        <span class="tech-tag">Turf.js</span>
-                    </div>
+                    <p class="tech-stack">Next.js · OpenLayers · Turf.js</p>
                     <div class="project-actions">
-                        <a class="project-action" href="https://geomockery.com/" target="_blank" rel="noopener">Demo →</a>
-                        <a class="project-action" href="https://github.com/rgdonohue/geomockery" target="_blank" rel="noopener">GitHub →</a>
+                        <a class="project-action" href="https://geomockery.com/" target="_blank" rel="noopener">Demo</a>
+                        <a class="project-action" href="https://github.com/rgdonohue/geomockery" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </article>
 
@@ -126,31 +126,21 @@
                     <img src="images/detour.png" alt="Santa Fe Detour screenshot" class="project-screenshot" loading="lazy">
                     <h3 class="project-title">Santa Fe Detour</h3>
                     <p class="project-description">Calculates optimal paths then uses network-aware analysis to score nearby detour stops — historic sites, food, scenic overlooks — by exact time and distance cost.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">MapLibre GL JS</span>
-                        <span class="tech-tag">OpenRouteService</span>
-                    </div>
+                    <p class="tech-stack">React · FastAPI · MapLibre GL JS · OpenRouteService</p>
                     <div class="project-actions">
-                        <a class="project-action" href="https://web-production-bad714.up.railway.app/" target="_blank" rel="noopener">Demo →</a>
-                        <a class="project-action" href="https://github.com/rgdonohue/detour" target="_blank" rel="noopener">GitHub →</a>
+                        <a class="project-action" href="https://web-production-bad714.up.railway.app/" target="_blank" rel="noopener">Demo</a>
+                        <a class="project-action" href="https://github.com/rgdonohue/detour" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </article>
 
-                <!-- Tava -->
+                <!-- Ghost Forest Watcher -->
                 <article class="project-item">
-                    <img src="images/tava.png" alt="Tava route planner screenshot" class="project-screenshot" loading="lazy">
-                    <h3 class="project-title">Tava</h3>
-                    <p class="project-description">Constraint-based route optimizer for cyclists and runners. Generates loop routes from distance, elevation, and surface parameters with backtrack reduction and shape scoring.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">MapLibre GL JS</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenStreetMap</span>
-                        <span class="tech-tag">GPX</span>
-                    </div>
+                    <img src="images/ghost-forest-watcher.jpg" alt="Ghost Forest Watcher vegetation analysis results" class="project-screenshot" loading="lazy">
+                    <h3 class="project-title">Ghost Forest Watcher</h3>
+                    <p class="project-description">NDVI change analysis for the East Troublesome Fire area, Colorado. Classifies Sentinel-2 imagery into vegetation health bins and surfaces results through a Streamlit interface, REST API, and H3 hexagonal aggregation.</p>
+                    <p class="tech-stack">Python · Rasterio · Streamlit · FastAPI · H3 · GEE</p>
                     <div class="project-actions">
-                        <a class="project-action" href="https://tava-production.up.railway.app/" target="_blank" rel="noopener">Demo →</a>
+                        <a class="project-action" href="https://github.com/rgdonohue/ghost-forest-watcher" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </article>
 
@@ -159,25 +149,68 @@
                     <img src="images/earthtile-finder.png" alt="Earthtile Finder screenshot" class="project-screenshot" loading="lazy">
                     <h3 class="project-title">Earthtile Finder</h3>
                     <p class="project-description">STAC API browser for satellite imagery. Search Sentinel-2 scenes by map extent, date, and cloud cover — preview footprints, scan thumbnails, download COGs.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">MapLibre GL JS</span>
-                        <span class="tech-tag">STAC API</span>
-                        <span class="tech-tag">Zustand</span>
-                    </div>
+                    <p class="tech-stack">React · MapLibre GL JS · STAC API · Zustand</p>
                     <div class="project-actions">
-                        <a class="project-action" href="https://rgdonohue.github.io/earthtile-finder/" target="_blank" rel="noopener">Demo →</a>
-                        <a class="project-action" href="https://github.com/rgdonohue/earthtile-finder" target="_blank" rel="noopener">GitHub →</a>
+                        <a class="project-action" href="https://rgdonohue.github.io/earthtile-finder/" target="_blank" rel="noopener">Demo</a>
+                        <a class="project-action" href="https://github.com/rgdonohue/earthtile-finder" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </article>
 
             </div>
+
+            <div class="bench-compact">
+                <h3 class="bench-compact-heading">on the bench</h3>
+                <ul class="bench-list">
+                    <li>
+                        <a href="https://github.com/rgdonohue/penguin-detection-pipeline" target="_blank" rel="noopener">Penguin Detection Pipeline</a>
+                        <span class="bench-dash">&mdash;</span> LiDAR + thermal fusion for automated penguin detection from drone surveys.
+                        <span class="tech-stack">Python · PDAL · LiDAR · Thermal Imagery</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rgdonohue/water-watcher" target="_blank" rel="noopener">Water Watcher</a>
+                        <span class="bench-dash">&mdash;</span> Freshwater health explorer for the Colorado Plateau.
+                        <span class="tech-stack">React · Leaflet · USGS API · EPA WQP</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rgdonohue/us-counties-and-maga" target="_blank" rel="noopener">Pain &amp; Politics</a>
+                        <span class="bench-dash">&mdash;</span> County-level spatial analysis of health metrics and voting patterns.
+                        <span class="tech-stack">Python · MapLibre · D3 · PMTiles</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rgdonohue/satellite-embeddings-change" target="_blank" rel="noopener">Change Explorer</a>
+                        <span class="bench-dash">&mdash;</span> Satellite embedding cosine similarity for change detection.
+                        <span class="tech-stack">Python · GEE · TiTiler · MapLibre</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rgdonohue/GIS-OSS" target="_blank" rel="noopener">GIS-OSS</a>
+                        <span class="bench-dash">&mdash;</span> Offline-capable geospatial analytics with self-hosted LLMs and PostGIS.
+                        <span class="tech-stack">Python · PostGIS · Docker · LLMs</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Divider Section -->
-    <section class="process" aria-hidden="true">
+    <!-- Tools Section -->
+    <section class="stack" aria-label="Tools and technologies">
         <div class="container">
+            <div class="stack-content">
+                <h3 class="stack-label">tools I use</h3>
+                <div class="stack-columns">
+                    <div class="stack-col">
+                        <h4 class="stack-col-heading">Data pipelines</h4>
+                        <p class="tech-stack">Python · GeoPandas · PostGIS · DuckDB · FastAPI · PDAL · GDAL/OGR</p>
+                    </div>
+                    <div class="stack-col">
+                        <h4 class="stack-col-heading">Spatial analysis</h4>
+                        <p class="tech-stack">QGIS · LiDAR &amp; Thermal · Rasterio · Shapely · Tippecanoe · PMTiles</p>
+                    </div>
+                    <div class="stack-col">
+                        <h4 class="stack-col-heading">Web mapping</h4>
+                        <p class="tech-stack">MapLibre GL JS · HTML/CSS/JS · Vite + React · D3.js</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -187,13 +220,13 @@
             <div class="about-wrapper">
                 <h2 id="about-title" class="section-title">About</h2>
 
-                <p class="about-text about-intro">
-                    I'm a geographer and cartographer from Durango, Colorado — now based in Santa Fe, NM, where I spend my off-hours hiking and skiing the Mountain West.
-                </p>
-
                 <div class="about-grid">
+                    <p class="about-text about-intro">
+                        I'm a geographer and cartographer from Durango, Colorado — now based in Santa Fe, NM, where I spend my off-hours hiking and skiing the Mountain West.
+                    </p>
+
                     <div class="about-image">
-                        <img src="images/richard-02.png"
+                        <img src="images/richard-about.jpg"
                             alt="Richard Donohue, founder of Small Batch Maps"
                             class="about-logo-image" loading="lazy">
                     </div>
@@ -217,9 +250,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact" aria-labelledby="contact-title">
         <div class="container">
-            <h2 id="contact-title" class="section-title">Get in touch</h2>
-
             <div class="contact-wrapper">
+            <h2 id="contact-title" class="section-title">Get in touch</h2>
                 <div class="contact-grid">
                     <!-- Contact Form -->
                     <div class="contact-form">
@@ -244,11 +276,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="comment" class="form-label">Comment *</label>
-                                <textarea id="comment" name="comment" rows="4" required class="form-input"
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" rows="4" required class="form-input"
                                     placeholder="What are you working on?"
-                                    aria-describedby="comment-error"></textarea>
-                                <div id="comment-error" class="field-error" role="alert" aria-live="polite"></div>
+                                    aria-describedby="message-error"></textarea>
+                                <div id="message-error" class="field-error" role="alert" aria-live="polite"></div>
                             </div>
 
                             <button type="submit" class="cta-button cta-button-full cta-button-prominent"
@@ -260,9 +292,6 @@
                                 confirmation message</div>
                         </form>
 
-                        <p class="form-note">
-                            I typically respond within 24 hours.
-                        </p>
                     </div>
 
                     <!-- Contact Invitation -->

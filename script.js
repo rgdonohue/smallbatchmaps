@@ -153,8 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!emailRegex.test(value)) return 'Please enter a valid email address';
             return null;
         },
-        validateComment: function(value) {
-            if (!value.trim()) return 'Comment is required';
+        validateMessage: function(value) {
+            if (!value.trim()) return 'Message is required';
             if (value.trim().length < 10) return 'Please provide more details (at least 10 characters)';
             return null;
         },
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
             switch(field.id) {
                 case 'name':    validator = this.validateName;    break;
                 case 'email':   validator = this.validateEmail;   break;
-                case 'comment': validator = this.validateComment; break;
+                case 'message': validator = this.validateMessage; break;
                 default: return true;
             }
             const error = validator(field.value);
@@ -347,19 +347,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     handleScroll();
     updateActiveNav();
-});
-
-// Compass rose interactivity
-document.addEventListener('DOMContentLoaded', function() {
-    const compassRose = document.querySelector('.compass-rose');
-    if (compassRose) {
-        let compassRotation = 0;
-        compassRose.addEventListener('click', function() {
-            compassRotation += 45;
-            this.style.transform = `rotate(${compassRotation}deg) scale(1.1)`;
-            setTimeout(() => {
-                this.style.transform = `rotate(${compassRotation}deg)`;
-            }, 200);
-        });
-    }
 });
