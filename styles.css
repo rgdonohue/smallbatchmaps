@@ -313,6 +313,7 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
 .logo-link:has(.logo-text.visible) .logo-image {
     transform: translateY(0) scale(0.65);
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.12));
+    margin-right: -2.1rem;
 }
 
 .logo-text {
