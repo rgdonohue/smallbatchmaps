@@ -1192,7 +1192,8 @@ a:focus {
         padding: 0 2rem;
     }
     .hero-content {
-        padding-left: calc((100vw - 1200px) / 2 + 2rem);
+        margin-left: calc((100vw - 1200px) / 2 + 2rem);
+        padding: 0 2rem;
     }
 }
 
