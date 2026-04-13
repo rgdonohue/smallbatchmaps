@@ -265,6 +265,7 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
     border-bottom: 1px solid rgba(122, 139, 122, 0.2);
     height: var(--header-height);
     transition: all var(--transition-normal);
+    overflow: visible;
 }
 
 .header.scrolled {
@@ -280,6 +281,7 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 1rem;
+    overflow: visible;
 }
 
 .logo-link {
@@ -296,9 +298,21 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
 }
 
 .logo-image {
-    height: 3.75rem;
+    height: 6rem;
     width: auto;
     flex-shrink: 0;
+    transform: translateY(2.5rem);
+    transform-origin: left center;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.22));
+    position: relative;
+    z-index: 1001;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* When logo text becomes visible on scroll, retract logo up into the nav */
+.logo-link:has(.logo-text.visible) .logo-image {
+    transform: translateY(0) scale(0.65);
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.12));
 }
 
 .logo-text {
@@ -480,7 +494,7 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
     position: relative;
     z-index: 10;
     text-align: left;
-    max-width: 520px;
+    max-width: clamp(480px, 38vw, 680px);
     padding: 0 2rem;
     background: none;
     border-radius: 0;
@@ -546,6 +560,15 @@ p a[href^="http"]:not([href*="smallbatchmaps"]):hover::before,
 
 
 @media (max-width: 767px) {
+    .logo-image {
+        height: 4.5rem;
+        transform: translateY(1.75rem);
+    }
+
+    .logo-link:has(.logo-text.visible) .logo-image {
+        transform: translateY(0) scale(0.72);
+    }
+
     .hero-bg::before {
         background: linear-gradient(
             to bottom,
